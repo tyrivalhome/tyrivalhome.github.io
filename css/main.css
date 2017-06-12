@@ -731,3 +731,43 @@ Work animation
     border-left: solid 3px #6C727A;
     padding-left: 30px
 }
+
+.descripton .master {
+    font-weight: bolder;
+    color: #ff675f;
+}
+
+.descripton .understand {
+    font-weight: bolder;
+    color: #38b7ea;
+}
+
+.descripton .begginer {
+    font-weight: bolder;
+    color: #5ed07b;
+}
+
+.descripton .tags {
+    margin: 30px 0 45px 0;
+}
+
+.descripton .tag {
+    margin: 30px;
+    padding: 10px 40px;
+    font-weight: normal;
+    color: #ffffff;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.descripton .tag.master {
+    background-color: #ff675f;
+}
+
+.descripton .tag.understand {
+    background-color: #38b7ea;
+}
+
+.descripton .tag.begginer {
+    background-color: #5ed07b;
+}
