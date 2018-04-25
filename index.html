@@ -1,245 +1,354 @@
-<!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
-<!--<![endif]-->
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+
     <title>Tyrival</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+    <link href="assets/css/animate.css" rel="stylesheet">
+
+    <!-- Custom styles CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" media="screen">
+    <script src="assets/js/modernizr.custom.js"></script>
 </head>
-
 <body>
-<section class="banner" role="banner">
-    <header id="header">
-        <!-- navigation section  -->
-        <div class="header-content clearfix">
-            <!--<a class="logo" href="#"><img src="images/logo.png" alt="Mafolio"></a>-->
-            <nav class="navigation" role="navigation">
-                <ul class="primary-nav">
-                    <li><a href="#">主页</a></li>
-                    <li><a href="http://blog.tyrival.com">博客</a></li>
-                    <li><a href="mailto:tyrival@qq.com" target="_blank">联系我</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="nav-toggle">Menu<span></span></a></div>
-        <!-- navigation section  -->
-    </header>
 
-    <!-- banner text -->
-    <div class="container">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="banner-text text-center">
-                <h1>周晨煜 @ Tyrival</h1>
-                <p>< 全栈程序员 / 自学狂 ></p>
-                <!-- banner text -->
-            </div>
-        </div>
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+<!-- Home start -->
+<section id="home" class="pfblock-image screen-height">
+    <div class="home-overlay"></div>
+    <div class="intro">
+        <div class="start">Hi, i am 周晨煜</div>
+        <h1>FULL-STACK DEVELOPER</h1>
+        <div class="start">Coding is Gaming</div>
     </div>
+    <a href="#abilities">
+        <div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+        </div>
+    </a>
 </section>
-<section id="descripton" class="section descripton">
-    <div class="container">
-        <div class="col-md-8 col-md-offset-2 hidden-xs text-center horizon">
-            <span class="col-md-4 col-xs-12 tag-container"><span class="tag master">熟 悉</span></span>
-            <span class="col-md-4 col-xs-12 tag-container"><span class="tag understand">掌 握</span></span>
-            <span class="col-md-4 col-xs-12 tag-container"><span class="tag begginer">了 解</span></span>
-        </div>
-        <div class="col-md-10 col-md-offset-1 text-center horizon">
-            <div class="title">前 端</div>
-            <div class="content">
-                <p><span class="master">CSS</span>：熟悉CSS、CSS3、Sass、Less，能解决多浏览器兼容性问题。</p>
-                <p><span class="master">Javascript</span>：熟悉面向对象和模块化编程，熟悉原型链、闭包，熟悉AMD、CMD、UMD规范，独立开发插件。</p>
-                <p><span class="master">jQuery & Bootstrap</span>：熟悉jQuery源码和API，熟悉Bootstrap样式、组件、API。</p>
-                <p><span class="master">ExtJS</span>：熟悉原理和应用，并编程实现其MVVM基本框架和语法糖。</p>
-                <p><span class="master">Vue</span>：读过源码，掌握其数据绑定基本原理，。</p>
-                <p>框架：<span class="master">jQuery</span> / <span class="master">Vue</span> / <span
-                        class="master">ExtJS</span> / <span class="master">Bootstrap</span> / <span class="master">RequireJS</span>
-                    / <span class="understand">EasyUI</span> / <span class="begginer">AngularJS</span> / <span
-                            class="begginer">React</span> / <span class="begginer">NodeJS</span></p>
-            </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1 text-center horizon">
-            <span class="title">后 端</span>
-            <div class="content">
-                <p><span class="master">Java</span>：熟悉常见MVC框架的基本原理和工程搭建，熟悉AOP原理和开发拦截器，熟悉Restful标准。</p>
-                <p><span class="master">工作流</span>：熟悉BPMN标准，熟悉工作流引擎架构、功能和代码实现。</p>
-                <p><span class="understand">Solr & Lucene</span>：掌握搜索引擎的插件开发。</p>
-                <p><span class="begginer">Netty</span>：读过部分核心代码，了解NIO原理。</p>
-                <p>框架：<span class="master">SpringMVC</span> / <span class="master">Spring</span> / <span class="master">Struts</span>
-                    / <span class="master">Mybatis</span> / <span class="master">Hibernate</span> / <span
-                            class="master">Activiti</span> / <span class="understand">jBPM</span> / <span
-                            class="understand">Solr</span> / <span class="begginer">Netty</span></p>
-            </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1 text-center horizon">
-            <div class="title">数据库</div>
-            <div class="content">
-                <p>熟悉多种数据库，并能优化数据存储性能。</p>
-                <p>类型：<span class="master">MySql</span> / <span class="master">OracleSql</span> / <span class="master">SqlServer</span>
-                    / <span class="understand">MongoDB</span> / <span class="begginer">PostgreSql</span></p>
-            </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1 text-center horizon">
-            <div class="title">分布式</div>
-            <div class="content">
-                <p><span class="understand">Hadoop</span>：掌握Hadoop系列框架的应用开发和部署。</p>
-                <p>框架：<span class="understand">Ambari</span> / <span class="understand">HDP</span> / <span
-                        class="understand">Hadoop</span> / <span class="understand">HBase</span> / <span
-                        class="understand">Hive</span> / <span class="understand">YARN</span> / <span
-                        class="understand">Zookeeper</span> ...</p>
-            </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1 text-center horizon">
-            <div class="title">算 法</div>
-            <div class="content">
-                <p><span class="understand">数据挖掘</span>：掌握部分算法及代码实现。</p>
-                <p><span class="begginer">机器学习</span>：了解基本概念。</p>
-                <p>例：<span class="understand">决策树</span> / <span class="understand">k-均值聚类算法</span> / <span
-                        class="understand">k-近邻算法</span> / <span class="understand">朴素贝斯叶</span> / <span
-                        class="understand">线性回归</span> ...</p>
-            </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1 text-center horizon">
-            <div class="title">其 他</div>
-            <div class="content">
-                <p>系统：<span class="master">Linux</span> / <span class="master">Window</span> / <span class="master">MacOS</span></p>
-                <p>应用：<span class="master">Git</span> / <span class="master">Subversion</span></p>
-                <p>框架：<span class="master">Tomcat</span> / <span class="master">Nginx</span> / <span class="master">Redis</span>
-                    / <span class="master">Maven</span> / <span class="understand">OpenLayer</span> / <span
-                            class="understand">Mapv</span> / <span class="understand">Bower</span> / <span
-                            class="begginer">Webpack</span> ...</p>
-            </div>
-        </div>
-    </div>
-</section>
-<!--<section id="works" class="works section no-padding">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-1.jpg" class="work-box"> <img
-                    src="images/work-1.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Logo Design</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-2.jpg" class="work-box"> <img
-                    src="images/work-2.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Website Design</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-3.jpg" class="work-box"> <img
-                    src="images/work-3.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Branding</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-4.jpg" class="work-box"> <img
-                    src="images/work-4.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Graphic Design</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-5.jpg" class="work-box"> <img
-                    src="images/work-5.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Website Design</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-6.jpg" class="work-box"> <img
-                    src="images/work-6.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Logo Design</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-7.jpg" class="work-box"> <img
-                    src="images/work-7.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Branding</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-            <div class="col-lg-3 col-md-6 col-sm-6 work"><a href="images/work-8.jpg" class="work-box"> <img
-                    src="images/work-8.jpg" alt="">
-                <div class="overlay">
-                    <div class="overlay-caption">
-                        <h5>Project Name</h5>
-                        <p>Website Design</p>
-                    </div>
-                </div>
-                &lt;!&ndash; overlay &ndash;&gt;
-            </a></div>
-        </div>
-    </div>
-</section>-->
-<!--<section id="hireme" class="section hireme">
-  <div class="container">
-    <div class="col-md-8 col-md-offset-2 text-center">
-      <h3>Need something specific?</h3>
-      <p>We are currently crafting new products but would love to hear from you.</p>
-      <a href="contact.html" class="btn btn-large">Hire me</a> </div>
-  </div>
-</section>-->
-<footer class="section footer">
-    <div class="footer-bottom">
+<!-- Home end -->
+
+<!-- Navigation start -->
+<header class="header">
+    <nav class="navbar navbar-custom" role="navigation">
         <div class="container">
-            <div class="col-md-12">
-                <p>
-                <ul class="footer-share">
-                    <li><a href="https://github.com/tyrival"><i class="fa fa-github"></i></a></li>
-                    <li><a href="https://twitter.com/Tyrival"><i class="fa fa-twitter"></i></a></li>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Tyrival Chow</a>
+            </div>
+            <div class="collapse navbar-collapse" id="custom-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#abilities">Abilities</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="http://blog.tyrival.com" target="_blank">Blog</a></li>
                 </ul>
-                </p>
-                <p>Tyrival' Home @ 2016</p>
+            </div>
+        </div><!-- .container -->
+    </nav>
+</header>
+<!-- Navigation end -->
+
+<!-- Services start -->
+<section id="abilities" class="pfblock pfblock-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="pfblock-header wow fadeInUp">
+                    <h2 class="pfblock-title">Abilities</h2>
+                    <div class="pfblock-line"></div>
+                    <div class="pfblock-subtitle">
+                        曾是2000正式员工的国企中唯一的程序员，一手包办需求调研、方案编制、软件开发、功能测试、实施培训的全全全全...全栈程序员
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="iconbox wow slideInLeft">
+                    <div class="iconbox-icon">
+                        <span class="icon-magic-wand"></span>
+                    </div>
+                    <div class="iconbox-text">
+                        <h3 class="iconbox-title">编 程</h3>
+                        <div class="iconbox-desc">
+                            多次的新产品开发经验，前后端架构设计，搭建框架，开发核心功能，约定开发规范
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="iconbox wow slideInLeft">
+                    <div class="iconbox-icon">
+                        <span class="icon-puzzle"></span>
+                    </div>
+                    <div class="iconbox-text">
+                        <h3 class="iconbox-title">管 理</h3>
+                        <div class="iconbox-desc">
+                            负责11人开发团队，1条产品线，长期并行3-5项目，协调人力资源，平衡项目计划，控制风险
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="iconbox wow slideInRight">
+                    <div class="iconbox-icon">
+                        <span class="icon-badge"></span>
+                    </div>
+                    <div class="iconbox-text">
+                        <h3 class="iconbox-title">分 析</h3>
+                        <div class="iconbox-desc">
+                            丰富的复杂制造型企业管理模式和政府智慧城市相关的经验，擅长控制需求边界，管理项目成本
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="iconbox wow slideInRight">
+                    <div class="iconbox-icon">
+                        <span class="icon-question"></span>
+                    </div>
+                    <div class="iconbox-text">
+                        <h3 class="iconbox-title">学 习</h3>
+                        <div class="iconbox-desc">
+                            关注技术的发展，长期保持对新技术的学习热情，坚持更新技术栈，学习能力强
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .row -->
+    </div><!-- .container -->
+</section>
+
+<section id="skills" class="pfblock">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="pfblock-header wow fadeInUp">
+                    <h2 class="pfblock-title">I am a Programmer</h2>
+                    <div class="pfblock-subtitle text-left">
+                        语言：html, css, css3, Less, Javascript, Java, Python, SQL
+                    </div>
+                    <div class="pfblock-subtitle text-left">
+                        框架：jQuery, Vue, RequireJS, EasyUI, ExtJS, Bootstrap, SpringMVC, Hibernate, Struts, Mybatis, Netty, Solr, Weka, Activiti, Selenium, MySQL, PostgreSQL, SqlServer, Oracle Database, MongoDB, Redis, Tomcat
+                    </div>
+                    <div class="pfblock-subtitle text-left">
+                        工具：Maven, Webpack, Git, Svn
+                    </div>
+                </div>
+            </div>
+        </div><!-- .row -->
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn">
+                    <figure class="effect-bubba">
+                        <img src="assets/images/item-1.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2><span>Java</span></h2>
+                            <p class="text-left">最常用的后端开发语言，工作范围内的项目的服务端程序，几乎全部用Java实现</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn">
+                    <figure class="effect-bubba">
+                        <img src="assets/images/item-2.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2><span>Javascript</span></h2>
+                            <p class="text-left">如果你看不懂别人的代码，说明水平差距很大，但谁高谁低就不一定了</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn">
+                    <figure class="effect-bubba">
+                        <img src="assets/images/item-3.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2><span>Python</span></h2>
+                            <p class="text-left">现在最喜欢的语言，1天学语法，1天学Flask和Scrapy，然后就能动手写Web应用和爬虫了</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn">
+                    <figure class="effect-bubba">
+                        <img src="assets/images/item-4.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2><span>Selenium</span></h2>
+                            <p class="text-left">除了自动化测试，还能抢小米手机的工具</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn">
+                    <figure class="effect-bubba">
+                        <img src="assets/images/item-5.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2><span>Netty</span></h2>
+                            <p>源码美如画</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+                <div class="grid wow zoomIn">
+                    <figure class="effect-bubba">
+                        <img src="assets/images/item-6.jpg" alt="img01"/>
+                        <figcaption>
+                            <h2><span>Activiti</span></h2>
+                            <p class="text-left">当遇到仅一个流程有几十个节点时，它能帮上大忙，还能教会你什么叫一个漂亮的工作流引擎</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div><!-- .contaier -->
+</section>
+<!-- Portfolio end -->
+
+<!-- Testimonials start -->
+<section id="projects" class="pfblock pfblock-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="pfblock-header wow fadeInUp">
+                    <h2 class="pfblock-title">Projects</h2>
+                    <div class="pfblock-line"></div>
+                    <!--<div class="pfblock-subtitle">
+                        项目经历
+                    </div>-->
+                </div>
+            </div>
+        </div><!-- .row -->
+        <div class="row">
+            <div id="cbp-qtrotator" class="cbp-qtrotator">
+                <div class="cbp-qtcontent">
+                    <blockquote>
+                        <p>质量管理系统：管理生产中的质量检验流程，难点在于零件型号超过10万，舾装阶段的零件-半成品-成品的制造过程很难精确管理，质检任务与生产、物资、设计数据的关联难以实现。获无锡市金桥工程奖。独立开发。</p>
+                        <footer>中船澄西 2014.12 ~ 2015.6</footer>
+                    </blockquote>
+                </div>
+                <div class="cbp-qtcontent">
+                    <blockquote>
+                        <p>工费结算系统：管理造船、修船、钢结构等工费结算的11个流程。难点是工费结算单上施工内容的标准化，与生产、物资、设计、成本系统的数据标准统一。独立开发。</p>
+                        <footer>中船澄西 2016.1 ~ 2016.7</footer>
+                    </blockquote>
+                </div>
+                <div class="cbp-qtcontent">
+                    <blockquote>
+                        <p>社管系统（产品）：智慧城市相关的网格化管理系统，基于地图管理辖区内人、事、地、物、情。主要负责前端架构搭建和核心功能实现，参与后端核心功能和部分模块。</p>
+                        <footer>广州都市圈 2016.11 ~ 2017.4</footer>
+                    </blockquote>
+                </div>
+                <div class="cbp-qtcontent">
+                    <blockquote>
+                        <p>社会治安综合治理系统（产品）：基于综治国标开发的社管系统的专题分支。开发团队常驻5人，负责项目技术管理，前后端架构设计，核心功能和部分业务模块的实现。</p>
+                        <footer>广州都市圈 2017.6 ~ 2016.11</footer>
+                    </blockquote>
+                </div>
+                <div class="cbp-qtcontent">
+                    <blockquote>
+                        <p>数据中心（产品）：分为数据管理系统和oMap Insight（数据展示），包括业务数据和空间数据。11人开发团队，负责团队管理，重点项目的技术管理，系统的前后端架构设计，核心功能和部分业务模块的实现。</p>
+                        <footer>广州都市圈 2018.1 ~ 至今</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div><!-- .row -->
+    </div><!-- .row -->
+</section>
+<!-- Testimonial end -->
+
+
+<!-- Contact start -->
+<section id="contact" class="pfblock">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="pfblock-header">
+                    <h2 class="pfblock-title">联系我</h2>
+                    <div class="pfblock-line"></div>
+                    <div class="pfblock-subtitle">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-5">
+                <a class="btn btn-lg btn-block" href="mailto:tyrival@qq.com" target="_blank">发 邮 件</a>
+            </div>
+        </div><!-- .row -->
+    </div><!-- .container -->
+</section>
+<!-- Contact end -->
+
+<!-- Footer start -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="social-links">
+                    <li>
+                        <a href="https://github.com/tyrival" class="wow fadeInUp" target="_blank"><i class="fa fa-github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/Tyrival" class="wow fadeInUp" data-wow-delay=".1s" target="_blank"><i class="fa fa-twitter"></i></a>
+                    </li>
+                </ul>
+                <p class="copyright">
+                    Tyrival's Website © 2016
+                </p>
+            </div>
+        </div><!-- .row -->
+    </div><!-- .container -->
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/retina.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/main.js"></script>
+<!-- Footer end -->
+
+<!-- Scroll to top -->
+<div class="scroll-up">
+    <a href="#home"><i class="fa fa-angle-up"></i></a>
+</div>
+<!-- Scroll to top end-->
+
+<!-- Javascript files -->
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+<script src="assets/js/imagesloaded.pkgd.js"></script>
+<script src="assets/js/jquery.sticky.js"></script>
+<script src="assets/js/smoothscroll.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/jquery.easypiechart.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.cbpQTRotator.js"></script>
+<script src="assets/js/custom.js"></script>
+
 </body>
 </html>
