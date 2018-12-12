@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -27,7 +27,7 @@
 		// default transition easing
 		easing : 'ease',
 		// rotator interval (ms)
-		interval : 15000
+		interval : 12000
 	};
 
 	$.CBPQTRotator.prototype = {
@@ -94,7 +94,7 @@
 
 		},
 		_startProgress : function() {
-			
+
 			setTimeout( $.proxy( function() {
 				this.$progress.css( { transition : 'width ' + this.options.interval + 'ms linear', width : '100%' } );
 			}, this ), 25 );
@@ -139,9 +139,9 @@
 				}
 				instance[ options ].apply( instance, args );
 			});
-		} 
+		}
 		else {
-			this.each(function() {	
+			this.each(function() {
 				var instance = $.data( this, 'cbpQTRotator' );
 				if ( instance ) {
 					instance._init();
