@@ -758,11 +758,6 @@ textarea.form-control {
 
 .grid:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -o-transform: scale(1.05);
-    -moz-transform: scale(1.05);
 }
 
 .grid .title {
