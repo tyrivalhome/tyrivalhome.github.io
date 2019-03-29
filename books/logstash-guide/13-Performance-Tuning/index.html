@@ -1,0 +1,581 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第13章 性能调优 · Logstash 6.7 用户指南中文版</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Tyrival">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../14-Monitoring-Logstash/" />
+    
+    
+    <link rel="prev" href="../12-Deploying-and-Scaling-Logstash/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Tyrival","repo":"logstash-guide","type":"star","size":"small","count":false}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Logstash 6.7 用户指南
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../01-Logstash-Introduction/">
+            
+                <a href="../01-Logstash-Introduction/">
+            
+                    
+                    第1章 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../02-Getting-Started-with-Logstash/">
+            
+                <a href="../02-Getting-Started-with-Logstash/">
+            
+                    
+                    第2章 快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../03-How-Logstash-Works/">
+            
+                <a href="../03-How-Logstash-Works/">
+            
+                    
+                    第3章 工作原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../04-Setting-Up-and-Running-Logstash/">
+            
+                <a href="../04-Setting-Up-and-Running-Logstash/">
+            
+                    
+                    第4章 配置和运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../05-Uprading-Logstash/">
+            
+                <a href="../05-Uprading-Logstash/">
+            
+                    
+                    第5章 升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../06-Configuring-Logstash/">
+            
+                <a href="../06-Configuring-Logstash/">
+            
+                    
+                    第6章 配置项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="../07-Managing-Logstash/">
+            
+                <a href="../07-Managing-Logstash/">
+            
+                    
+                    第7章 运维
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="../08-Working-with-Logstash-Modules/">
+            
+                <a href="../08-Working-with-Logstash-Modules/">
+            
+                    
+                    第8章 模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="../09-Working-with-Filebeat-Modules/">
+            
+                <a href="../09-Working-with-Filebeat-Modules/">
+            
+                    
+                    第9章 Filebeat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="../10-Data-Resiliency/">
+            
+                <a href="../10-Data-Resiliency/">
+            
+                    
+                    第10章 数据弹性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="../11-Transforming-Data/">
+            
+                <a href="../11-Transforming-Data/">
+            
+                    
+                    第11章 数据传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.12" data-path="../12-Deploying-and-Scaling-Logstash/">
+            
+                <a href="../12-Deploying-and-Scaling-Logstash/">
+            
+                    
+                    第12章 部署和伸缩
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.13" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第13章 性能调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.14" data-path="../14-Monitoring-Logstash/">
+            
+                <a href="../14-Monitoring-Logstash/">
+            
+                    
+                    第14章 监控
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.15" data-path="../15-Monitoring-APIs/">
+            
+                <a href="../15-Monitoring-APIs/">
+            
+                    
+                    第15章 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.16" data-path="../16-Working-with-plugins/">
+            
+                <a href="../16-Working-with-plugins/">
+            
+                    
+                    第16章 插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.17" data-path="../17-Input-plugins/">
+            
+                <a href="../17-Input-plugins/">
+            
+                    
+                    第17章 输入插件Input plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.18" data-path="../18-Output-plugins/">
+            
+                <a href="../18-Output-plugins/">
+            
+                    
+                    第18章 输出插件Output plugins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.19" data-path="../19-Filter-plugins/">
+            
+                <a href="../19-Filter-plugins/">
+            
+                    
+                    第19章 过滤器Filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.20" data-path="../20-Coder-plugins/">
+            
+                <a href="../20-Coder-plugins/">
+            
+                    
+                    第20章 编解码器Codec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.21" data-path="../21-Tips-and-Best-Pracitices/">
+            
+                <a href="../21-Tips-and-Best-Pracitices/">
+            
+                    
+                    第21章 技巧和最佳实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.22" data-path="../22-Troubleshooting-Common-Problems/">
+            
+                <a href="../22-Troubleshooting-Common-Problems/">
+            
+                    
+                    第22章 常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.23" data-path="../23-Contributing-to-Logstash/">
+            
+                <a href="../23-Contributing-to-Logstash/">
+            
+                    
+                    第23章 插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.24" data-path="../24-Contributing-a-java-Plugin/">
+            
+                <a href="../24-Contributing-a-java-Plugin/">
+            
+                    
+                    第24章 Java插件开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第13章 性能调优</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../12-Deploying-and-Scaling-Logstash/" class="navigation navigation-prev " aria-label="Previous page: 第12章 部署和伸缩">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../14-Monitoring-Logstash/" class="navigation navigation-next " aria-label="Next page: 第14章 监控">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第13章 性能调优","level":"1.1.13","depth":2,"next":{"title":"第14章 监控","level":"1.1.14","depth":2,"path":"14-Monitoring-Logstash/README.md","ref":"14-Monitoring-Logstash/README.md","articles":[]},"previous":{"title":"第12章 部署和伸缩","level":"1.1.12","depth":2,"path":"12-Deploying-and-Scaling-Logstash/README.md","ref":"12-Deploying-and-Scaling-Logstash/README.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"logstash-guide","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"13-Performance-Tuning/README.md","mtime":"2019-03-29T10:00:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-29T14:02:13.975Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
