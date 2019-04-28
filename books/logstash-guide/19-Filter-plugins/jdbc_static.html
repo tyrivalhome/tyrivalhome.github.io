@@ -3712,65 +3712,65 @@
 <p><strong>lookups</strong></p>
 <p>&#x200B;    &#x5728;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x4E0A;&#x6267;&#x884C;&#x67E5;&#x8BE2;&#x4EE5;&#x4E30;&#x5BCC;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x3002;&#x6839;&#x636E;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x4EE5;&#x4FBF;&#x901A;&#x8FC7;&#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x8868;&#x6765;&#x4E30;&#x5BCC;&#x4E8B;&#x4EF6;&#x6570;&#x636E;&#x3002;&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;SQL&#x8BED;&#x53E5;&#x5E94;&#x8BE5;&#x53EA;&#x8FD4;&#x56DE;&#x4E00;&#x884C;&#x3002;&#x4EFB;&#x4F55;&#x884C;&#x90FD;&#x5C06;&#x8F6C;&#x6362;&#x4E3A;Hash&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x5B58;&#x50A8;&#x76EE;&#x6807;&#x5B57;&#x6BB5;&#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
 <p>&#x200B;    &#x4EE5;&#x4E0B;config&#x793A;&#x4F8B;&#x4ECE;&#x8FDC;&#x7A0B;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x63D0;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x5176;&#x7F13;&#x5B58;&#x5728;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x5E76;&#x901A;&#x8FC7;&#x67E5;&#x8BE2;&#x672C;&#x5730;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7F13;&#x5B58;&#x7684;&#x6570;&#x636E;&#x6765;&#x4E30;&#x5BCC;&#x4E8B;&#x4EF6;&#x3002;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   jdbc_static {
     loaders =&gt; [ &#x2460;
       {
-        id =&gt; &quot;remote-servers&quot;
-        query =&gt; &quot;select ip, descr from ref.local_ips order by ip&quot;
-        local_table =&gt; &quot;servers&quot;
+        id =&gt; <span class="hljs-string">&quot;remote-servers&quot;</span>
+        query =&gt; <span class="hljs-string">&quot;select ip, descr from ref.local_ips order by ip&quot;</span>
+        <span class="hljs-built_in">local</span>_table =&gt; <span class="hljs-string">&quot;servers&quot;</span>
       },
       {
-        id =&gt; &quot;remote-users&quot;
-        query =&gt; &quot;select firstname, lastname, userid from ref.local_users order by userid&quot;
-        local_table =&gt; &quot;users&quot;
+        id =&gt; <span class="hljs-string">&quot;remote-users&quot;</span>
+        query =&gt; <span class="hljs-string">&quot;select firstname, lastname, userid from ref.local_users order by userid&quot;</span>
+        <span class="hljs-built_in">local</span>_table =&gt; <span class="hljs-string">&quot;users&quot;</span>
       }
     ]
-    local_db_objects =&gt; [ &#x2461;
+    <span class="hljs-built_in">local</span>_db_objects =&gt; [ &#x2461;
       {
-        name =&gt; &quot;servers&quot;
-        index_columns =&gt; [&quot;ip&quot;]
+        name =&gt; <span class="hljs-string">&quot;servers&quot;</span>
+        index_columns =&gt; [<span class="hljs-string">&quot;ip&quot;</span>]
         columns =&gt; [
-          [&quot;ip&quot;, &quot;varchar(15)&quot;],
-          [&quot;descr&quot;, &quot;varchar(255)&quot;]
+          [<span class="hljs-string">&quot;ip&quot;</span>, <span class="hljs-string">&quot;varchar(15)&quot;</span>],
+          [<span class="hljs-string">&quot;descr&quot;</span>, <span class="hljs-string">&quot;varchar(255)&quot;</span>]
         ]
       },
       {
-        name =&gt; &quot;users&quot;
-        index_columns =&gt; [&quot;userid&quot;]
+        name =&gt; <span class="hljs-string">&quot;users&quot;</span>
+        index_columns =&gt; [<span class="hljs-string">&quot;userid&quot;</span>]
         columns =&gt; [
-          [&quot;firstname&quot;, &quot;varchar(255)&quot;],
-          [&quot;lastname&quot;, &quot;varchar(255)&quot;],
-          [&quot;userid&quot;, &quot;int&quot;]
+          [<span class="hljs-string">&quot;firstname&quot;</span>, <span class="hljs-string">&quot;varchar(255)&quot;</span>],
+          [<span class="hljs-string">&quot;lastname&quot;</span>, <span class="hljs-string">&quot;varchar(255)&quot;</span>],
+          [<span class="hljs-string">&quot;userid&quot;</span>, <span class="hljs-string">&quot;int&quot;</span>]
         ]
       }
     ]
-    local_lookups =&gt; [ &#x2462;
+    <span class="hljs-built_in">local</span>_lookups =&gt; [ &#x2462;
       {
-        id =&gt; &quot;local-servers&quot;
-        query =&gt; &quot;select descr as description from servers WHERE ip = :ip&quot;
-        parameters =&gt; {ip =&gt; &quot;[from_ip]&quot;}
-        target =&gt; &quot;server&quot;
+        id =&gt; <span class="hljs-string">&quot;local-servers&quot;</span>
+        query =&gt; <span class="hljs-string">&quot;select descr as description from servers WHERE ip = :ip&quot;</span>
+        parameters =&gt; {ip =&gt; <span class="hljs-string">&quot;[from_ip]&quot;</span>}
+        target =&gt; <span class="hljs-string">&quot;server&quot;</span>
       },
       {
-        id =&gt; &quot;local-users&quot;
-        query =&gt; &quot;select firstname, lastname from users WHERE userid = :id&quot;
-        parameters =&gt; {id =&gt; &quot;[loggedin_userid]&quot;}
-        target =&gt; &quot;user&quot; &#x2463;
+        id =&gt; <span class="hljs-string">&quot;local-users&quot;</span>
+        query =&gt; <span class="hljs-string">&quot;select firstname, lastname from users WHERE userid = :id&quot;</span>
+        parameters =&gt; {id =&gt; <span class="hljs-string">&quot;[loggedin_userid]&quot;</span>}
+        target =&gt; <span class="hljs-string">&quot;user&quot;</span> &#x2463;
       }
     ]
-    # using add_field here to add &amp; rename values to the event root
-    add_field =&gt; { server_name =&gt; &quot;%{[server][0][description]}&quot; }
-    add_field =&gt; { user_firstname =&gt; &quot;%{[user][0][firstname]}&quot; } &#x2464;
-    add_field =&gt; { user_lastname =&gt; &quot;%{[user][0][lastname]}&quot; } &#x2465;
-    remove_field =&gt; [&quot;server&quot;, &quot;user&quot;]
-    staging_directory =&gt; &quot;/tmp/logstash/jdbc_static/import_data&quot;
-    loader_schedule =&gt; &quot;* */2 * * *&quot; # run loaders every 2 hours
-    jdbc_user =&gt; &quot;logstash&quot;
-    jdbc_password =&gt; &quot;example&quot;
-    jdbc_driver_class =&gt; &quot;org.postgresql.Driver&quot;
-    jdbc_driver_library =&gt; &quot;/tmp/logstash/vendor/postgresql-42.1.4.jar&quot;
-    jdbc_connection_string =&gt; &quot;jdbc:postgresql://remotedb:5432/ls_test_2&quot;
+    <span class="hljs-comment"># using add_field here to add &amp; rename values to the event root</span>
+    add_field =&gt; { server_name =&gt; <span class="hljs-string">&quot;%{[server][0][description]}&quot;</span> }
+    add_field =&gt; { user_firstname =&gt; <span class="hljs-string">&quot;%{[user][0][firstname]}&quot;</span> } &#x2464;
+    add_field =&gt; { user_lastname =&gt; <span class="hljs-string">&quot;%{[user][0][lastname]}&quot;</span> } &#x2465;
+    remove_field =&gt; [<span class="hljs-string">&quot;server&quot;</span>, <span class="hljs-string">&quot;user&quot;</span>]
+    staging_directory =&gt; <span class="hljs-string">&quot;/tmp/logstash/jdbc_static/import_data&quot;</span>
+    loader_schedule =&gt; <span class="hljs-string">&quot;* */2 * * *&quot;</span> <span class="hljs-comment"># run loaders every 2 hours</span>
+    jdbc_user =&gt; <span class="hljs-string">&quot;logstash&quot;</span>
+    jdbc_password =&gt; <span class="hljs-string">&quot;example&quot;</span>
+    jdbc_driver_class =&gt; <span class="hljs-string">&quot;org.postgresql.Driver&quot;</span>
+    jdbc_driver_library =&gt; <span class="hljs-string">&quot;/tmp/logstash/vendor/postgresql-42.1.4.jar&quot;</span>
+    jdbc_connection_string =&gt; <span class="hljs-string">&quot;jdbc:postgresql://remotedb:5432/ls_test_2&quot;</span>
   }
 }
 </code></pre>
@@ -3780,20 +3780,20 @@
 <p><img src="../source/images/common/4.png" alt="4"> &#x6307;&#x5B9A;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x4E2D;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x3002; &#x5982;&#x679C;&#x67E5;&#x627E;&#x8FD4;&#x56DE;&#x591A;&#x4E2A;&#x5217;&#xFF0C;&#x5219;&#x6570;&#x636E;&#x5C06;&#x4F5C;&#x4E3A;JSON&#x5BF9;&#x8C61;&#x5B58;&#x50A8;&#x5728;&#x5B57;&#x6BB5;&#x4E2D;&#x3002;</p>
 <p><img src="../source/images/common/5.png" alt="5"> <img src="../source/images/common/6.png" alt="6"> &#x4ECE;JSON&#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x5B58;&#x50A8;&#x5728;&#x9876;&#x7EA7;&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x4E2D;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;Kibana&#x4E2D;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
 <p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-json">input {
+<pre><code class="lang-sh">input {
   generator {
     lines =&gt; [
       <span class="hljs-string">&apos;{&quot;from_ip&quot;: &quot;10.2.3.20&quot;, &quot;app&quot;: &quot;foobar&quot;, &quot;amount&quot;: 32.95}&apos;</span>,
       <span class="hljs-string">&apos;{&quot;from_ip&quot;: &quot;10.2.3.30&quot;, &quot;app&quot;: &quot;barfoo&quot;, &quot;amount&quot;: 82.95}&apos;</span>,
       <span class="hljs-string">&apos;{&quot;from_ip&quot;: &quot;10.2.3.40&quot;, &quot;app&quot;: &quot;bazfoo&quot;, &quot;amount&quot;: 22.95}&apos;</span>
     ]
-    count =&gt; <span class="hljs-number">200</span>
+    count =&gt; 200
   }
 }
 
 filter {
   json {
-    source =&gt; <span class="hljs-string">&quot;message&quot;</span>
+    <span class="hljs-built_in">source</span> =&gt; <span class="hljs-string">&quot;message&quot;</span>
   }
 
   jdbc_static {
@@ -3801,10 +3801,10 @@ filter {
       {
         id =&gt; <span class="hljs-string">&quot;servers&quot;</span>
         query =&gt; <span class="hljs-string">&quot;select ip, descr from ref.local_ips order by ip&quot;</span>
-        local_table =&gt; <span class="hljs-string">&quot;servers&quot;</span>
+        <span class="hljs-built_in">local</span>_table =&gt; <span class="hljs-string">&quot;servers&quot;</span>
       }
     ]
-    local_db_objects =&gt; [
+    <span class="hljs-built_in">local</span>_db_objects =&gt; [
       {
         name =&gt; <span class="hljs-string">&quot;servers&quot;</span>
         index_columns =&gt; [<span class="hljs-string">&quot;ip&quot;</span>]
@@ -3814,7 +3814,7 @@ filter {
         ]
       }
     ]
-    local_lookups =&gt; [
+    <span class="hljs-built_in">local</span>_lookups =&gt; [
       {
         query =&gt; <span class="hljs-string">&quot;select descr as description from servers WHERE ip = :ip&quot;</span>
         parameters =&gt; {ip =&gt; <span class="hljs-string">&quot;[from_ip]&quot;</span>}
@@ -4297,18 +4297,18 @@ irb(main):003:0&gt; exit
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x5411;&#x6B64;&#x4E8B;&#x4EF6;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;&#x3002;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x53EF;&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>&#xFF05;{field}</code> &#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  jdbc_static {
     add_field =&gt; { <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> =&gt; <span class="hljs-string">&quot;Hello world, from %{host}&quot;</span> }
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also add multiple fields at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also add multiple fields at once:</span>
 filter {
-  http {
+  jdbc_static {
     add_field =&gt; {
-      &quot;foo_%{somefield}&quot; =&gt; &quot;Hello world, from %{host}&quot;
-      &quot;new_field&quot; =&gt; &quot;new_static_value&quot;
+      <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> =&gt; <span class="hljs-string">&quot;Hello world, from %{host}&quot;</span>
+      <span class="hljs-string">&quot;new_field&quot;</span> =&gt; <span class="hljs-string">&quot;new_static_value&quot;</span>
     }
   }
 }
@@ -4321,16 +4321,16 @@ filter {
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x5411;&#x4E8B;&#x4EF6;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x6807;&#x8BB0;&#x3002;&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>%{field}</code> &#x8BED;&#x6CD5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  jdbc_static {
     add_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also add multiple tags at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also add multiple tags at once:</span>
 filter {
-  http {
-    add_tag =&gt; [ &quot;foo_%{somefield}&quot;, &quot;taggedy_tag&quot;]
+  jdbc_static {
+    add_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;taggedy_tag&quot;</span>]
   }
 }
 </code></pre>
@@ -4347,8 +4347,8 @@ filter {
 <li>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
 </ul>
 <p>&#x4E3A;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x6DFB;&#x52A0;&#x552F;&#x4E00; <code>ID</code>&#x3002;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;ID&#xFF0C;Logstash&#x5C06;&#x751F;&#x6210;&#x4E00;&#x4E2A;ID&#x3002;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x5728;&#x914D;&#x7F6E;&#x4E2D;&#x8BBE;&#x7F6E;&#x6B64;ID&#x3002;&#x5F53;&#x60A8;&#x6709;&#x4E24;&#x4E2A;&#x6216;&#x66F4;&#x591A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x63D2;&#x4EF6;&#x65F6;&#xFF0C;&#x8FD9;&#x5C24;&#x5176;&#x6709;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x6709;2&#x4E2A;http&#x8FC7;&#x6EE4;&#x5668;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6DFB;&#x52A0;&#x547D;&#x540D;ID&#x5C06;&#x6709;&#x52A9;&#x4E8E;&#x5728;&#x4F7F;&#x7528;&#x76D1;&#x89C6;API&#x65F6;&#x76D1;&#x89C6;Logstash&#x3002;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  jdbc_static {
     id =&gt; <span class="hljs-string">&quot;ABC&quot;</span>
   }
 }
@@ -4365,16 +4365,16 @@ filter {
 <li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>[]</code></li>
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#xFF0C;&#x8BF7;&#x4ECE;&#x6B64;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;&#x3002;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  jdbc_static {
     remove_field =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also remove multiple fields at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also remove multiple fields at once:</span>
 filter {
-  http {
-    remove_field =&gt; [ &quot;foo_%{somefield}&quot;, &quot;my_extraneous_field&quot; ]
+  jdbc_static {
+    remove_field =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;my_extraneous_field&quot;</span> ]
   }
 }
 </code></pre>
@@ -4385,16 +4385,16 @@ filter {
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x4ECE;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x610F;tag&#x3002;tag&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>%{field}</code> &#x8BED;&#x6CD5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  jdbc_static {
     remove_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also remove multiple tags at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also remove multiple tags at once:</span>
 filter {
-  http {
-    remove_tag =&gt; [ &quot;foo_%{somefield}&quot;, &quot;sad_unwanted_tag&quot;]
+  jdbc_static {
+    remove_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;sad_unwanted_tag&quot;</span>]
   }
 }
 </code></pre>
@@ -4442,7 +4442,7 @@ filter {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"jdbc_static","level":"1.1.19.21","depth":3,"next":{"title":"jdbc_streaming","level":"1.1.19.22","depth":3,"path":"19-Filter-plugins/jdbc_streaming.md","ref":"19-Filter-plugins/jdbc_streaming.md","articles":[]},"previous":{"title":"i18n","level":"1.1.19.20","depth":3,"path":"19-Filter-plugins/i18n.md","ref":"19-Filter-plugins/i18n.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"19-Filter-plugins/jdbc_static.md","mtime":"2019-04-28T06:03:54.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T06:52:57.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"jdbc_static","level":"1.1.19.21","depth":3,"next":{"title":"jdbc_streaming","level":"1.1.19.22","depth":3,"path":"19-Filter-plugins/jdbc_streaming.md","ref":"19-Filter-plugins/jdbc_streaming.md","articles":[]},"previous":{"title":"i18n","level":"1.1.19.20","depth":3,"path":"19-Filter-plugins/i18n.md","ref":"19-Filter-plugins/i18n.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"19-Filter-plugins/jdbc_static.md","mtime":"2019-04-28T07:36:23.566Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T08:01:27.813Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

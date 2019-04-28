@@ -3813,18 +3813,18 @@
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x5411;&#x6B64;&#x4E8B;&#x4EF6;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;&#x3002;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x53EF;&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>&#xFF05;{field}</code> &#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  uuid {
     add_field =&gt; { <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> =&gt; <span class="hljs-string">&quot;Hello world, from %{host}&quot;</span> }
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also add multiple fields at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also add multiple fields at once:</span>
 filter {
-  http {
+  uuid {
     add_field =&gt; {
-      &quot;foo_%{somefield}&quot; =&gt; &quot;Hello world, from %{host}&quot;
-      &quot;new_field&quot; =&gt; &quot;new_static_value&quot;
+      <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> =&gt; <span class="hljs-string">&quot;Hello world, from %{host}&quot;</span>
+      <span class="hljs-string">&quot;new_field&quot;</span> =&gt; <span class="hljs-string">&quot;new_static_value&quot;</span>
     }
   }
 }
@@ -3837,16 +3837,16 @@ filter {
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x5411;&#x4E8B;&#x4EF6;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x6807;&#x8BB0;&#x3002;&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>%{field}</code> &#x8BED;&#x6CD5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  uuid {
     add_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also add multiple tags at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also add multiple tags at once:</span>
 filter {
-  http {
-    add_tag =&gt; [ &quot;foo_%{somefield}&quot;, &quot;taggedy_tag&quot;]
+  uuid {
+    add_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;taggedy_tag&quot;</span>]
   }
 }
 </code></pre>
@@ -3863,8 +3863,8 @@ filter {
 <li>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
 </ul>
 <p>&#x4E3A;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x6DFB;&#x52A0;&#x552F;&#x4E00; <code>ID</code>&#x3002;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;ID&#xFF0C;Logstash&#x5C06;&#x751F;&#x6210;&#x4E00;&#x4E2A;ID&#x3002;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x5728;&#x914D;&#x7F6E;&#x4E2D;&#x8BBE;&#x7F6E;&#x6B64;ID&#x3002;&#x5F53;&#x60A8;&#x6709;&#x4E24;&#x4E2A;&#x6216;&#x66F4;&#x591A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x63D2;&#x4EF6;&#x65F6;&#xFF0C;&#x8FD9;&#x5C24;&#x5176;&#x6709;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x6709;2&#x4E2A;http&#x8FC7;&#x6EE4;&#x5668;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6DFB;&#x52A0;&#x547D;&#x540D;ID&#x5C06;&#x6709;&#x52A9;&#x4E8E;&#x5728;&#x4F7F;&#x7528;&#x76D1;&#x89C6;API&#x65F6;&#x76D1;&#x89C6;Logstash&#x3002;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  uuid {
     id =&gt; <span class="hljs-string">&quot;ABC&quot;</span>
   }
 }
@@ -3881,16 +3881,16 @@ filter {
 <li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>[]</code></li>
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#xFF0C;&#x8BF7;&#x4ECE;&#x6B64;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;&#x3002;&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  uuid {
     remove_field =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also remove multiple fields at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also remove multiple fields at once:</span>
 filter {
-  http {
-    remove_field =&gt; [ &quot;foo_%{somefield}&quot;, &quot;my_extraneous_field&quot; ]
+  uuid {
+    remove_field =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;my_extraneous_field&quot;</span> ]
   }
 }
 </code></pre>
@@ -3901,16 +3901,16 @@ filter {
 </ul>
 <p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x4ECE;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x610F;tag&#x3002;tag&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>%{field}</code> &#x8BED;&#x6CD5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
 <p>&#x4F8B;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
-  http {
+<pre><code class="lang-sh">filter {
+  uuid {
     remove_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
   }
 }
 </code></pre>
-<pre><code class="lang-json"># You can also remove multiple tags at once:
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also remove multiple tags at once:</span>
 filter {
-  http {
-    remove_tag =&gt; [ &quot;foo_%{somefield}&quot;, &quot;sad_unwanted_tag&quot;]
+  uuid {
+    remove_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;sad_unwanted_tag&quot;</span>]
   }
 }
 </code></pre>
@@ -3958,7 +3958,7 @@ filter {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"uuid","level":"1.1.19.42","depth":3,"next":{"title":"xml","level":"1.1.19.43","depth":3,"path":"19-Filter-plugins/xml.md","ref":"19-Filter-plugins/xml.md","articles":[]},"previous":{"title":"useragent","level":"1.1.19.41","depth":3,"path":"19-Filter-plugins/useragent.md","ref":"19-Filter-plugins/useragent.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"19-Filter-plugins/uuid.md","mtime":"2019-04-28T06:03:54.087Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T06:52:57.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"uuid","level":"1.1.19.42","depth":3,"next":{"title":"xml","level":"1.1.19.43","depth":3,"path":"19-Filter-plugins/xml.md","ref":"19-Filter-plugins/xml.md","articles":[]},"previous":{"title":"useragent","level":"1.1.19.41","depth":3,"path":"19-Filter-plugins/useragent.md","ref":"19-Filter-plugins/useragent.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"19-Filter-plugins/uuid.md","mtime":"2019-04-28T07:36:23.529Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T08:01:27.813Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

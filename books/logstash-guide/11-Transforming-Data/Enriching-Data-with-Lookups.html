@@ -3697,7 +3697,7 @@
 <p><a href="../19-Filter-plugins/dns.html">dns filter</a></p>
 <p>dns&#x8FC7;&#x6EE4;&#x5668;&#x63D2;&#x4EF6;&#x6267;&#x884C;&#x6807;&#x51C6;&#x6216;&#x53CD;&#x5411;DNS&#x67E5;&#x627E;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x5BF9; <code>source_host</code> &#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x5730;&#x5740;&#x6267;&#x884C;&#x53CD;&#x5411;&#x67E5;&#x627E;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x66FF;&#x6362;&#x4E3A;&#x57DF;&#x540D;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   dns {
     reverse =&gt; [ <span class="hljs-string">&quot;source_host&quot;</span> ]
     action =&gt; <span class="hljs-string">&quot;replace&quot;</span>
@@ -3724,16 +3724,16 @@
 </code></pre>
 <p><a href="../19-Filter-plugins/geoip.html">geoip filter</a></p>
 <p>geoip&#x8FC7;&#x6EE4;&#x5668;&#x6DFB;&#x52A0;&#x6709;&#x5173;IP&#x5730;&#x5740;&#x4F4D;&#x7F6E;&#x7684;&#x5730;&#x7406;&#x4FE1;&#x606F;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   geoip {
-    source =&gt; <span class="hljs-string">&quot;clientip&quot;</span>
+    <span class="hljs-built_in">source</span> =&gt; <span class="hljs-string">&quot;clientip&quot;</span>
   }
 }
 </code></pre>
 <p>&#x5E94;&#x7528;geoip&#x8FC7;&#x6EE4;&#x5668;&#x540E;&#xFF0C;&#x5C06;&#x4F7F;&#x7528;geoip&#x5B57;&#x6BB5;&#x4E30;&#x5BCC;&#x4E8B;&#x4EF6;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   geoip {
-    source =&gt; <span class="hljs-string">&quot;clientip&quot;</span>
+    <span class="hljs-built_in">source</span> =&gt; <span class="hljs-string">&quot;clientip&quot;</span>
   }
 }
 </code></pre>
@@ -3810,7 +3810,7 @@
 <p><a href="../19-Filter-plugins/jdbc_streaming.html">jdbc_streaming filter</a></p>
 <p>jdbc_streaming&#x8FC7;&#x6EE4;&#x5668;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x6570;&#x636E;&#x4E30;&#x5BCC;&#x4E8B;&#x4EF6;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x6267;&#x884C;SQL&#x67E5;&#x8BE2;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x96C6;&#x5B58;&#x50A8;&#x5728;&#x540D;&#x4E3A;country_details&#x7684;&#x5B57;&#x6BB5;&#x4E2D;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   jdbc_streaming {
     jdbc_driver_library =&gt; <span class="hljs-string">&quot;/path/to/mysql-connector-java-5.1.34-bin.jar&quot;</span>
     jdbc_driver_class =&gt; <span class="hljs-string">&quot;com.mysql.jdbc.Driver&quot;</span>
@@ -3828,7 +3828,7 @@
 <p><a href="../19-Filter-plugins/translate.html">translate filter</a></p>
 <p>translate&#x8FC7;&#x6EE4;&#x5668;&#x6839;&#x636E;&#x6563;&#x5217;&#x6216;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x66FF;&#x6362;&#x503C;&#x66FF;&#x6362;&#x5B57;&#x6BB5;&#x5185;&#x5BB9;&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#xFF1A;YAML&#xFF0C;JSON&#x548C;CSV&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x83B7;&#x53D6;response_code&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x5C06;&#x5176;&#x8F6C;&#x6362;&#x4E3A;&#x57FA;&#x4E8E;&#x5B57;&#x5178;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;response_code&#x5B57;&#x6BB5;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   translate {
     field =&gt; <span class="hljs-string">&quot;response_code&quot;</span>
     destination =&gt; <span class="hljs-string">&quot;http_response&quot;</span>
@@ -3845,9 +3845,9 @@
 <p><a href="../19-Filter-plugins/useragent.html">useragent filter</a></p>
 <p>useragent&#x8FC7;&#x6EE4;&#x5668;&#x5C06;&#x5BA2;&#x6237;&#x7AEF;&#x5B57;&#x7B26;&#x4E32;&#x89E3;&#x6790;&#x4E3A;&#x5B57;&#x6BB5;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x793A;&#x4F8B;&#x83B7;&#x53D6;&#x4EE3;&#x7406;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x7528;&#x6237;&#x4EE3;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5C06;&#x5176;&#x89E3;&#x6790;&#x4E3A;&#x7528;&#x6237;&#x4EE3;&#x7406;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x5C06;&#x7528;&#x6237;&#x4EE3;&#x7406;&#x5B57;&#x6BB5;&#x6DFB;&#x52A0;&#x5230;&#x540D;&#x4E3A;user_agent&#x7684;&#x65B0;&#x5B57;&#x6BB5;&#x4E2D;&#x3002;&#x5B83;&#x8FD8;&#x4F1A;&#x5220;&#x9664;&#x539F;&#x59CB; <code>agent</code> &#x5B57;&#x6BB5;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   useragent {
-    source =&gt; <span class="hljs-string">&quot;agent&quot;</span>
+    <span class="hljs-built_in">source</span> =&gt; <span class="hljs-string">&quot;agent&quot;</span>
     target =&gt; <span class="hljs-string">&quot;user_agent&quot;</span>
     remove_field =&gt; <span class="hljs-string">&quot;agent&quot;</span>
   }
@@ -3908,7 +3908,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"丰富数据","level":"1.1.11.4","depth":3,"next":{"title":"第12章-部署和集群扩展","level":"1.1.12","depth":2,"path":"12-Deploying-and-Scaling-Logstash/README.md","ref":"12-Deploying-and-Scaling-Logstash/README.md","articles":[]},"previous":{"title":"提取字段和调整数据","level":"1.1.11.3","depth":3,"path":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","ref":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"11-Transforming-Data/Enriching-Data-with-Lookups.md","mtime":"2019-04-08T03:37:20.848Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T06:52:57.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"丰富数据","level":"1.1.11.4","depth":3,"next":{"title":"第12章-部署和集群扩展","level":"1.1.12","depth":2,"path":"12-Deploying-and-Scaling-Logstash/README.md","ref":"12-Deploying-and-Scaling-Logstash/README.md","articles":[]},"previous":{"title":"提取字段和调整数据","level":"1.1.11.3","depth":3,"path":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","ref":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"11-Transforming-Data/Enriching-Data-with-Lookups.md","mtime":"2019-04-28T07:28:04.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T08:01:27.813Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

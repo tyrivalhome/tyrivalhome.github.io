@@ -3696,7 +3696,7 @@
 <p><a href="../19-Filter-plugins/date.html">date filter</a></p>
 <p>&#x89E3;&#x6790;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x65E5;&#x671F;&#xFF0C;&#x4EE5;&#x7528;&#x4F5C;&#x4E8B;&#x4EF6;&#x7684;Logstash&#x65F6;&#x95F4;&#x6233;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x89E3;&#x6790;&#x540D;&#x4E3A; <code>logdate</code> &#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x4EE5;&#x8BBE;&#x7F6E;Logstash&#x65F6;&#x95F4;&#x6233;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   date {
     match =&gt; [ <span class="hljs-string">&quot;logdate&quot;</span>, <span class="hljs-string">&quot;MMM dd yyyy HH:mm:ss&quot;</span> ]
   }
@@ -3705,7 +3705,7 @@
 <p><a href="../19-Filter-plugins/drop.html">drop filter</a></p>
 <p>&#x4E22;&#x5F03;&#x4E8B;&#x4EF6;&#x3002;&#x8BE5;&#x8FC7;&#x6EE4;&#x5668;&#x901A;&#x5E38;&#x4E0E;&#x6761;&#x4EF6;&#x7EC4;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x5220;&#x9664;&#x8C03;&#x8BD5;&#x7EA7;&#x522B;&#x65E5;&#x5FD7;&#x6D88;&#x606F;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   <span class="hljs-keyword">if</span> [loglevel] == <span class="hljs-string">&quot;debug&quot;</span> {
     drop { }
   }
@@ -3714,9 +3714,9 @@
 <p><a href="../19-Filter-plugins/fingerprint.html">fingerprint filter</a></p>
 <p>&#x901A;&#x8FC7;&#x5E94;&#x7528;&#x4E00;&#x81F4;&#x7684;&#x54C8;&#x5E0C;&#x503C;&#x4F7F;&#x7528;&#x6307;&#x7EB9;&#x5B57;&#x6BB5;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x6307;&#x7EB9; <code>IP</code>&#xFF0C;<code>@timestamp</code>&#x548C; <code>message</code> &#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x5C06;&#x54C8;&#x5E0C;&#x503C;&#x6DFB;&#x52A0;&#x5230;&#x540D;&#x4E3A; <code>generated_id</code> &#x7684;&#x5143;&#x6570;&#x636E;&#x5B57;&#x6BB5;&#x4E2D;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   fingerprint {
-    source =&gt; [<span class="hljs-string">&quot;IP&quot;</span>, <span class="hljs-string">&quot;@timestamp&quot;</span>, <span class="hljs-string">&quot;message&quot;</span>]
+    <span class="hljs-built_in">source</span> =&gt; [<span class="hljs-string">&quot;IP&quot;</span>, <span class="hljs-string">&quot;@timestamp&quot;</span>, <span class="hljs-string">&quot;message&quot;</span>]
     method =&gt; <span class="hljs-string">&quot;SHA1&quot;</span>
     key =&gt; <span class="hljs-string">&quot;0123&quot;</span>
     target =&gt; <span class="hljs-string">&quot;[@metadata][generated_id]&quot;</span>
@@ -3726,14 +3726,14 @@
 <p><a href="../19-Filter-plugins/mutate.html">mutate filter</a></p>
 <p>&#x5728;&#x5B57;&#x6BB5;&#x4E0A;&#x6267;&#x884C;&#x5E38;&#x89C4;&#x64CD;&#x4F5C;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x91CD;&#x547D;&#x540D;&#x3001;&#x5220;&#x9664;&#x3001;&#x66FF;&#x6362;&#x548C;&#x4FEE;&#x6539;&#x4E8B;&#x4EF6;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x5C06; <code>HOSTORIP</code> &#x5B57;&#x6BB5;&#x91CD;&#x547D;&#x540D;&#x4E3A; <code>client_ip</code>&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   mutate {
     rename =&gt; { <span class="hljs-string">&quot;HOSTORIP&quot;</span> =&gt; <span class="hljs-string">&quot;client_ip&quot;</span> }
   }
 }
 </code></pre>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x4ECE;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x4E2D;&#x5220;&#x9664;&#x524D;&#x5BFC;&#x548C;&#x5C3E;&#x968F;&#x7A7A;&#x683C;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   mutate {
     strip =&gt; [<span class="hljs-string">&quot;field1&quot;</span>, <span class="hljs-string">&quot;field2&quot;</span>]
   }
@@ -3742,7 +3742,7 @@
 <p><a href="../19-Filter-plugins/ruby.html">ruby filter</a></p>
 <p>&#x6267;&#x884C;Ruby&#x4EE3;&#x7801;&#x3002;</p>
 <p>&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x6267;&#x884C;&#x7684;Ruby&#x4EE3;&#x7801;&#x53D6;&#x6D88;90&#xFF05;&#x4E8B;&#x4EF6;&#xFF1A;</p>
-<pre><code class="lang-json">filter {
+<pre><code class="lang-sh">filter {
   ruby {
     code =&gt; <span class="hljs-string">&quot;event.cancel if rand &lt;= 0.90&quot;</span>
   }
@@ -3791,7 +3791,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"核心操作","level":"1.1.11.1","depth":3,"next":{"title":"反序列化数据","level":"1.1.11.2","depth":3,"path":"11-Transforming-Data/Deserializing-Data.md","ref":"11-Transforming-Data/Deserializing-Data.md","articles":[]},"previous":{"title":"第11章-数据传输","level":"1.1.11","depth":2,"path":"11-Transforming-Data/README.md","ref":"11-Transforming-Data/README.md","articles":[{"title":"核心操作","level":"1.1.11.1","depth":3,"path":"11-Transforming-Data/Performing-Core-Operations.md","ref":"11-Transforming-Data/Performing-Core-Operations.md","articles":[]},{"title":"反序列化数据","level":"1.1.11.2","depth":3,"path":"11-Transforming-Data/Deserializing-Data.md","ref":"11-Transforming-Data/Deserializing-Data.md","articles":[]},{"title":"提取字段和调整数据","level":"1.1.11.3","depth":3,"path":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","ref":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","articles":[]},{"title":"丰富数据","level":"1.1.11.4","depth":3,"path":"11-Transforming-Data/Enriching-Data-with-Lookups.md","ref":"11-Transforming-Data/Enriching-Data-with-Lookups.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"11-Transforming-Data/Performing-Core-Operations.md","mtime":"2019-04-08T02:49:41.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T06:52:57.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"核心操作","level":"1.1.11.1","depth":3,"next":{"title":"反序列化数据","level":"1.1.11.2","depth":3,"path":"11-Transforming-Data/Deserializing-Data.md","ref":"11-Transforming-Data/Deserializing-Data.md","articles":[]},"previous":{"title":"第11章-数据传输","level":"1.1.11","depth":2,"path":"11-Transforming-Data/README.md","ref":"11-Transforming-Data/README.md","articles":[{"title":"核心操作","level":"1.1.11.1","depth":3,"path":"11-Transforming-Data/Performing-Core-Operations.md","ref":"11-Transforming-Data/Performing-Core-Operations.md","articles":[]},{"title":"反序列化数据","level":"1.1.11.2","depth":3,"path":"11-Transforming-Data/Deserializing-Data.md","ref":"11-Transforming-Data/Deserializing-Data.md","articles":[]},{"title":"提取字段和调整数据","level":"1.1.11.3","depth":3,"path":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","ref":"11-Transforming-Data/Extracting-Fields-and-Wrangling-Data.md","articles":[]},{"title":"丰富数据","level":"1.1.11.4","depth":3,"path":"11-Transforming-Data/Enriching-Data-with-Lookups.md","ref":"11-Transforming-Data/Enriching-Data-with-Lookups.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"11-Transforming-Data/Performing-Core-Operations.md","mtime":"2019-04-28T07:28:04.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T08:01:27.813Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
