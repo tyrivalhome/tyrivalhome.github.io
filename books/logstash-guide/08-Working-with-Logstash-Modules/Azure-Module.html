@@ -3852,7 +3852,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </blockquote>
 <p><strong><code>event_hubs</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Array">Array</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">Array</a></p>
 </li>
 <li><p>&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 </li>
@@ -3865,7 +3865,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 <p>&#x9AD8;&#x7EA7;&#x914D;&#x7F6E;&#x4F7F;&#x7528; <code>event_hub_connection</code> &#x800C;&#x4E0D;&#x662F; <code>event_hub_connections</code>&#x3002; <code>event_hub_connection</code> &#x9009;&#x9879;&#x662F;&#x5404;Event Hub&#x5206;&#x522B;&#x5B9A;&#x4E49;&#x7684;&#x3002;</p>
 <p><strong><code>event_hub_connections</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Array">Array</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">Array</a></p>
 </li>
 <li><p>&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 </li>
@@ -3877,7 +3877,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><strong><code>checkpoint_interval</code></strong></p>
 <ul>
-<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Number">Number</a></li>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">Number</a></li>
 <li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;5&#x79D2;</li>
 <li>&#x8BBE;&#x7F6E;&#x4E3A;0&#x4EE5;&#x7981;&#x7528;&#x3002;
 &#x6279;&#x5904;&#x7406;&#x671F;&#x95F4;&#x5199;&#x5165;&#x68C0;&#x67E5;&#x70B9;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF08;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;&#x3002;&#x68C0;&#x67E5;&#x70B9;&#x544A;&#x8BC9;Logstash&#x91CD;&#x542F;&#x540E;&#x6062;&#x590D;&#x5904;&#x7406;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x65E0;&#x8BBA;&#x6B64;&#x8BBE;&#x7F6E;&#x5982;&#x4F55;&#xFF0C;&#x90FD;&#x4F1A;&#x5728;&#x6BCF;&#x6279;&#x6B21;&#x7ED3;&#x675F;&#x65F6;&#x81EA;&#x52A8;&#x5199;&#x5165;&#x68C0;&#x67E5;&#x70B9;&#x3002;</li>
@@ -3885,19 +3885,19 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 <p>&#x8FC7;&#x4E8E;&#x9891;&#x7E41;&#x5730;&#x7F16;&#x5199;&#x68C0;&#x67E5;&#x70B9;&#x4F1A;&#x4E0D;&#x5FC5;&#x8981;&#x5730;&#x51CF;&#x6162;&#x5904;&#x7406;&#x901F;&#x5EA6;&#x3002;</p>
 <p><strong><code>consumer_group</code></strong></p>
 <ul>
-<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></li>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></li>
 <li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>$Default</code></li>
 <li>&#x6D88;&#x8D39;&#x8005;&#x7EC4;&#x7528;&#x4E8E;&#x9605;&#x8BFB;Event Hub&#x3002;&#x4E13;&#x95E8;&#x4E3A;Logstash&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x8005;&#x7EC4;&#x3002;&#x7136;&#x540E;&#x786E;&#x4FDD;Logstash&#x7684;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x90FD;&#x4F7F;&#x7528;&#x8BE5;&#x4F7F;&#x7528;&#x8005;&#x7EC4;&#xFF0C;&#x4EE5;&#x4FBF;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x5DE5;&#x4F5C;&#x3002;</li>
 </ul>
 <p><strong><code>decorate_events</code></strong></p>
 <ul>
-<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Number">Boolean</a></li>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">Boolean</a></li>
 <li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;false</li>
 <li>&#x6DFB;&#x52A0;&#x6709;&#x5173;Event Hub&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC; <code>Event Hub name</code>&#x3001;<code>consumer_group</code>&#x3001;<code>processor_host</code>&#x3001;<code>partition</code>&#x3001;<code>offset</code>&#x3001;<code>sequence</code>&#x3001;<code>timestamp</code>&#x548C; <code>event_size</code>&#x3002;</li>
 </ul>
 <p><strong><code>initial_position</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6709;&#x6548;&#x53C2;&#x6570;&#x662F; <code>beginning</code>&#x3001; <code>end</code>&#x3001;<code>look_back</code></p>
 </li>
@@ -3914,7 +3914,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><strong><code>initial_position_look_back</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Number">Number</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">Number</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>86400</code></p>
 </li>
@@ -3924,7 +3924,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><strong><code>max_batch_size</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Number">Number</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">Number</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>125</code></p>
 <p>&#x4E00;&#x8D77;&#x68C0;&#x7D22;&#x548C;&#x5904;&#x7406;&#x7684;&#x6700;&#x5927;&#x4E8B;&#x4EF6;&#x6570;&#x3002;&#x6BCF;&#x6279;&#x540E;&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x68C0;&#x67E5;&#x70B9;&#x3002;&#x589E;&#x52A0;&#x6B64;&#x503C;&#x53EF;&#x80FD;&#x6709;&#x52A9;&#x4E8E;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x66F4;&#x591A;&#x5185;&#x5B58;&#x3002;</p>
@@ -3932,7 +3932,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><strong><code>storage_connectionedi</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>blob&#x5E10;&#x6237;&#x5B58;&#x50A8;&#x7684;&#x8FDE;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x3002; Blob&#x5E10;&#x6237;&#x5B58;&#x50A8;&#x5728;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x4E4B;&#x95F4;&#x6301;&#x7EED;&#x5B58;&#x5728;&#x504F;&#x79FB;&#xFF0C;&#x5E76;&#x786E;&#x4FDD;Logstash&#x7684;&#x591A;&#x4E2A;&#x5B9E;&#x4F8B;&#x5904;&#x7406;&#x4E0D;&#x540C;&#x7684;&#x5206;&#x533A;&#x3002;&#x8BBE;&#x7F6E;&#x6B64;&#x503C;&#x540E;&#xFF0C;&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#x505C;&#x6B62;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5982;&#x679C;&#x672A;&#x8BBE;&#x7F6E;&#x6B64;&#x503C;&#xFF0C;&#x5219;&#x6BCF;&#x6B21;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x65F6;&#x90FD;&#x4F1A;&#x4F7F;&#x7528; <code>initial_position</code> &#x503C;&#x3002;</p>
@@ -3941,7 +3941,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><strong><code>storage_container</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x5982;&#x679C;&#x672A;&#x5B9A;&#x4E49;&#xFF0C;&#x5219;&#x9ED8;&#x8BA4;&#x4E3A;Event Hub&#x540D;&#x79F0;</p>
 <p>&#x7528;&#x4E8E;&#x4FDD;&#x7559;&#x504F;&#x79FB;&#x91CF;&#x5E76;&#x5141;&#x8BB8;&#x591A;&#x4E2A;Logstash&#x5B9E;&#x4F8B;&#x4E00;&#x8D77;&#x5DE5;&#x4F5C;&#x7684;&#x5B58;&#x50A8;&#x5BB9;&#x5668;&#x7684;&#x540D;&#x79F0;&#x3002;</p>
@@ -3950,7 +3950,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><strong><code>threads</code></strong></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Number">Number</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">Number</a></p>
 </li>
 <li><p>&#x6700;&#x5C0F;&#x503C;&#x4E3A; <code>2</code></p>
 </li>
@@ -3963,16 +3963,16 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 <p>&#x4EE5;&#x4E0B;&#x662F;&#x6240;&#x6709;&#x6A21;&#x5757;&#x90FD;&#x652F;&#x6301;&#x7684;&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
 <p><code>var.elasticsearch.hosts</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#URI">URI</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#uri">URI</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>&quot;localhost:9200&quot;</code></p>
-<p>&#x8BBE;&#x7F6E;Elasticsearch&#x96C6;&#x7FA4;&#x7684;&#x4E3B;&#x673A;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x4E3B;&#x673A;&#xFF0C;&#x60A8;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x7AEF;&#x53E3;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&quot;myhost:9200&quot;&#x3002;&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Array">Array</a>&#xFF0C;Logstash&#x5C06;&#x5728;hosts&#x53C2;&#x6570;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x4E0A;&#x52A0;&#x8F7D;&#x5E73;&#x8861;&#x8BF7;&#x6C42;&#x3002;&#x4ECE;&#x4E3B;&#x673A;&#x5217;&#x8868;&#x4E2D;&#x6392;&#x9664; <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.7/modules-node.html" target="_blank">&#x4E13;&#x7528;&#x4E3B;&#x8282;&#x70B9;</a> &#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;Logstash&#x5411;&#x4E3B;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x6279;&#x91CF;&#x8BF7;&#x6C42;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x5E94;&#x4EC5;&#x5F15;&#x7528;Elasticsearch&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6216;&#x5BA2;&#x6237;&#x7AEF;&#x8282;&#x70B9;</p>
+<p>&#x8BBE;&#x7F6E;Elasticsearch&#x96C6;&#x7FA4;&#x7684;&#x4E3B;&#x673A;&#x3002;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x4E3B;&#x673A;&#xFF0C;&#x60A8;&#x5FC5;&#x987B;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x7AEF;&#x53E3;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&quot;myhost:9200&quot;&#x3002;&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">Array</a>&#xFF0C;Logstash&#x5C06;&#x5728;hosts&#x53C2;&#x6570;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;&#x4E0A;&#x52A0;&#x8F7D;&#x5E73;&#x8861;&#x8BF7;&#x6C42;&#x3002;&#x4ECE;&#x4E3B;&#x673A;&#x5217;&#x8868;&#x4E2D;&#x6392;&#x9664; <a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.7/modules-node.html" target="_blank">&#x4E13;&#x7528;&#x4E3B;&#x8282;&#x70B9;</a> &#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;Logstash&#x5411;&#x4E3B;&#x8282;&#x70B9;&#x53D1;&#x9001;&#x6279;&#x91CF;&#x8BF7;&#x6C42;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x5E94;&#x4EC5;&#x5F15;&#x7528;Elasticsearch&#x4E2D;&#x7684;&#x6570;&#x636E;&#x6216;&#x5BA2;&#x6237;&#x7AEF;&#x8282;&#x70B9;</p>
 <p>&#x8FD9;&#x91CC;&#x7684;URL&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x4EFB;&#x4F55;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x5FC5;&#x987B;&#x662F;URL&#x8F6C;&#x4E49;&#xFF01;&#x8FD9;&#x610F;&#x5473;&#x7740; <code>&#xFF03;</code> &#x5E94;&#x8BE5;&#x4EE5; <code>&#xFF05;23</code> &#x7684;&#x5F62;&#x5F0F;&#x8F93;&#x5165;&#x3002;</p>
 </li>
 </ul>
 <p><code>var.elasticsearch.username</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x662F;&quot;elastic&quot;</p>
 <p>&#x5411;Elasticsearch&#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;</p>
@@ -3980,7 +3980,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.elasticsearch.password</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&quot;changeme&quot;</p>
 <p>&#x5411;Elasticsearch&#x96C6;&#x7FA4;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5BC6;&#x7801;&#x3002;</p>
@@ -3988,7 +3988,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.elasticsearch.ssl.enabled</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#Boolean">Boolean</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#boolean">Boolean</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</p>
 <p>&#x542F;&#x7528;&#x4E0E;Elasticsearch&#x96C6;&#x7FA4;&#x7684;SSL / TLS&#x5B89;&#x5168;&#x901A;&#x4FE1;&#x3002;&#x4FDD;&#x7559;&#x6B64;&#x672A;&#x6307;&#x5B9A;&#x5C06;&#x4F7F;&#x7528;&#x5728; <code>hosts</code> &#x4E2D;&#x5217;&#x51FA;&#x7684;URL&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x4EFB;&#x4F55;&#x65B9;&#x6848;&#x3002;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;&#x663E;&#x5F0F;&#x534F;&#x8BAE;&#xFF0C;&#x5219;&#x5C06;&#x4F7F;&#x7528;&#x7EAF;HTTP&#x3002;&#x5982;&#x679C;&#x6B64;&#x5904;&#x660E;&#x786E;&#x7981;&#x7528;&#x4E86;SSL&#xFF0C;&#x5219;&#x5728;&#x4E3B;&#x673A;&#x4E2D;&#x63D0;&#x4F9B;HTTPS URL&#x65F6;&#xFF0C;&#x63D2;&#x4EF6;&#x5C06;&#x62D2;&#x7EDD;&#x542F;&#x52A8;&#x3002;</p>
@@ -3996,7 +3996,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.elasticsearch.ssl.verification_mode</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x662F;&quot;strict&quot;</p>
 <p>&#x4E0E;Elasticsearch&#x901A;&#x4FE1;&#x65F6;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x9A8C;&#x8BC1;&#x8BBE;&#x7F6E;&#x3002;&#x8BBE;&#x7F6E;&#x4E3A; <code>disable</code> &#x4EE5;&#x5173;&#x95ED;&#x4E3B;&#x673A;&#x540D;&#x9A8C;&#x8BC1;&#x3002;&#x7981;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x5B58;&#x5728;&#x4E25;&#x91CD;&#x7684;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;</p>
@@ -4004,7 +4004,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.elasticsearch.ssl.certificate_authority</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>&#x4E0E;Elasticsearch&#x901A;&#x4FE1;&#x65F6;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;SSL&#x8BC1;&#x4E66;&#x7684;X.509&#x8BC1;&#x4E66;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -4012,7 +4012,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.elasticsearch.ssl.certificate</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>&#x4E0E;Elasticsearch&#x901A;&#x4FE1;&#x65F6;&#x7528;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;X.509&#x8BC1;&#x4E66;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -4020,7 +4020,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.elasticsearch.ssl.key</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>&#x4E0E;Elasticsearch&#x901A;&#x4FE1;&#x65F6;&#x7528;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x8BC1;&#x4E66;&#x5BC6;&#x94A5;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -4028,7 +4028,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.host</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; &quot;localhost:5601&quot;</p>
 <p>&#x8BBE;&#x7F6E;&#x7528;&#x4E8E;&#x5BFC;&#x5165;&#x4EEA;&#x8868;&#x677F;&#x548C;&#x53EF;&#x89C6;&#x5316;&#x7684;Kibana&#x5B9E;&#x4F8B;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x548C;&#x7AEF;&#x53E3;&#x3002;&#x4F8B;&#x5982;&#xFF1A; &quot;myhost:5601&quot;&#x3002;</p>
@@ -4036,7 +4036,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.scheme</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&quot;http&quot;</p>
 <p>&#x8BBE;&#x7F6E;&#x7528;&#x4E8E;&#x5230;&#x8FBE;Kibana&#x5B9E;&#x4F8B;&#x7684;&#x534F;&#x8BAE;&#x3002;&#x9009;&#x9879;&#x5305;&#x62EC;&#xFF1A;&quot;http&quot;&#x6216;&quot;https&quot;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&quot;http&quot;&#x3002;</p>
@@ -4044,7 +4044,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.username</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x662F;&quot;elastic&quot;</p>
 <p>&#x7528;&#x4E8E;&#x5BF9;&#x5B89;&#x5168;&#x7684;Kibana&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;</p>
@@ -4052,7 +4052,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.password</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;&quot;changeme&quot;</p>
 <p>&#x7528;&#x4E8E;&#x5411;&#x5B89;&#x5168;Kibana&#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x5BC6;&#x7801;&#x3002;</p>
@@ -4060,7 +4060,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.ssl.enabled</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">Boolean</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">Boolean</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;false</p>
 <p>&#x542F;&#x7528;&#x4E0E;Kibana&#x5B9E;&#x4F8B;&#x7684;SSL/TLS&#x5B89;&#x5168;&#x901A;&#x4FE1;&#x3002;</p>
@@ -4068,7 +4068,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.ssl.verification_mode</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x9ED8;&#x8BA4;&#x503C;&#x662F;&quot;strict&quot;</p>
 <p>&#x4E0E;Kibana&#x901A;&#x4FE1;&#x65F6;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x9A8C;&#x8BC1;&#x8BBE;&#x7F6E;&#x3002;&#x8BBE;&#x7F6E;&#x4E3A;&#x7981;&#x7528;&#x4EE5;&#x5173;&#x95ED;&#x4E3B;&#x673A;&#x540D;&#x9A8C;&#x8BC1;&#x3002;&#x7981;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x5B58;&#x5728;&#x4E25;&#x91CD;&#x7684;&#x5B89;&#x5168;&#x95EE;&#x9898;&#x3002;</p>
@@ -4076,7 +4076,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.ssl.certificate_authority</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>&#x4E0E;Kibana&#x901A;&#x4FE1;&#x65F6;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;SSL&#x8BC1;&#x4E66;&#x7684;X.509&#x8BC1;&#x4E66;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -4084,7 +4084,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.ssl.certificate</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>&#x4E0E;Kibana&#x901A;&#x4FE1;&#x65F6;&#x7528;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;X.509&#x8BC1;&#x4E66;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -4092,7 +4092,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
 </ul>
 <p><code>var.kibana.ssl.key</code></p>
 <ul>
-<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#String">String</a></p>
+<li><p>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">String</a></p>
 </li>
 <li><p>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;</p>
 <p>&#x4E0E;Kibana&#x901A;&#x4FE1;&#x65F6;&#x7528;&#x4E8E;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x7684;&#x8BC1;&#x4E66;&#x5BC6;&#x94A5;&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
@@ -4227,7 +4227,7 @@ Logstash Azure&#x6A21;&#x5757;&#x662F;&#x57FA;&#x672C;&#x8BB8;&#x53EF;&#x8BC1;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Azure模块","level":"1.1.8.4","depth":3,"next":{"title":"第9章-Filebeat","level":"1.1.9","depth":2,"path":"09-Working-with-Filebeat-Modules/README.md","ref":"09-Working-with-Filebeat-Modules/README.md","articles":[{"title":"使用采集管道解析","level":"1.1.9.1","depth":3,"path":"09-Working-with-Filebeat-Modules/Use-ingest-pipelines-for-parsing.md","ref":"09-Working-with-Filebeat-Modules/Use-ingest-pipelines-for-parsing.md","articles":[]},{"title":"使用Logstash管道解析","level":"1.1.9.2","depth":3,"path":"09-Working-with-Filebeat-Modules/Use-Logstash-pipelines-for-parsing.md","ref":"09-Working-with-Filebeat-Modules/Use-Logstash-pipelines-for-parsing.md","articles":[]},{"title":"示例：安装Filebeat并连接Kafka和Logstash","level":"1.1.9.3","depth":3,"path":"09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.md","ref":"09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.md","articles":[]}]},"previous":{"title":"Netflow模块","level":"1.1.8.3","depth":3,"path":"08-Working-with-Logstash-Modules/Netflow-Module.md","ref":"08-Working-with-Logstash-Modules/Netflow-Module.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"08-Working-with-Logstash-Modules/Azure-Module.md","mtime":"2019-04-28T03:09:16.487Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T05:34:32.183Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Azure模块","level":"1.1.8.4","depth":3,"next":{"title":"第9章-Filebeat","level":"1.1.9","depth":2,"path":"09-Working-with-Filebeat-Modules/README.md","ref":"09-Working-with-Filebeat-Modules/README.md","articles":[{"title":"使用采集管道解析","level":"1.1.9.1","depth":3,"path":"09-Working-with-Filebeat-Modules/Use-ingest-pipelines-for-parsing.md","ref":"09-Working-with-Filebeat-Modules/Use-ingest-pipelines-for-parsing.md","articles":[]},{"title":"使用Logstash管道解析","level":"1.1.9.2","depth":3,"path":"09-Working-with-Filebeat-Modules/Use-Logstash-pipelines-for-parsing.md","ref":"09-Working-with-Filebeat-Modules/Use-Logstash-pipelines-for-parsing.md","articles":[]},{"title":"示例：安装Filebeat并连接Kafka和Logstash","level":"1.1.9.3","depth":3,"path":"09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.md","ref":"09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.md","articles":[]}]},"previous":{"title":"Netflow模块","level":"1.1.8.3","depth":3,"path":"08-Working-with-Logstash-Modules/Netflow-Module.md","ref":"08-Working-with-Logstash-Modules/Netflow-Module.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"08-Working-with-Logstash-Modules/Azure-Module.md","mtime":"2019-04-28T06:03:54.075Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T06:52:57.122Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
