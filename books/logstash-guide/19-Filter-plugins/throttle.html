@@ -3691,7 +3691,343 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#throttle"><b></b>throttle</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E2E;&#x52A9;"><b></b>&#x5E2E;&#x52A9;</a></li><li><span class="title-icon "></span><a href="#&#x8BF4;&#x660E;"><b></b>&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;"><b></b>Throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;"><b></b>&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="throttle"><a name="throttle" class="anchor-navigation-ex-anchor" href="#throttle"><i class="fa fa-link" aria-hidden="true"></i></a><a name="throttle" class="plugin-anchor" href="#throttle"><i class="fa fa-link" aria-hidden="true"></i></a>throttle</h2>
+<ul>
+<li>&#x63D2;&#x4EF6;&#x7248;&#x672C;&#xFF1A;v4.0.4</li>
+<li>&#x53D1;&#x5E03;&#x4E8E;&#xFF1A;2017-11-07</li>
+<li><a href="https://github.com/logstash-plugins/logstash-filter-throttle/blob/v4.0.4/CHANGELOG.md" target="_blank">&#x66F4;&#x65B0;&#x65E5;&#x5FD7;</a></li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x5176;&#x4ED6;&#x7248;&#x672C;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://www.elastic.co/guide/en/logstash-versioned-plugins/current/filter-throttle-index.html" target="_blank">&#x63D2;&#x4EF6;&#x7248;&#x672C;&#x6587;&#x6863;</a>&#x3002;</p>
+<h3 id="&#x5E2E;&#x52A9;"><a name="&#x5E2E;&#x52A9;" class="anchor-navigation-ex-anchor" href="#&#x5E2E;&#x52A9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5E2E;&#x52A9;" class="plugin-anchor" href="#&#x5E2E;&#x52A9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E2E;&#x52A9;</h3>
+<p>&#x6709;&#x5173;&#x63D2;&#x4EF6;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8BF7;&#x5728; <a href="https://discuss.elastic.co" target="_blank">&#x8BBA;&#x575B;</a> &#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E3B;&#x9898;&#x3002;&#x5BF9;&#x4E8E;bug&#x6216;&#x529F;&#x80FD;&#x8BF7;&#x6C42;&#xFF0C;&#x8BF7;&#x5728; <a href="https://github.com/logstash-plugins/logstash-filter-throttle" target="_blank">Github</a> &#x521B;&#x5EFA;issue&#x3002;&#x6709;&#x5173;Elastic&#x652F;&#x6301;&#x63D2;&#x4EF6;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://www.elastic.co/support/matrix#matrix_logstash_plugins" target="_blank">Elastic&#x652F;&#x6301;&#x5217;&#x8868;</a>&#x3002;</p>
+<h3 id="&#x8BF4;&#x660E;"><a name="&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8BF4;&#x660E;" class="plugin-anchor" href="#&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BF4;&#x660E;</h3>
+<p>Throttle&#x8FC7;&#x6EE4;&#x5668;&#x7528;&#x4E8E;&#x9650;&#x5236;&#x4E8B;&#x4EF6;&#x7684;&#x6570;&#x91CF;&#x3002; &#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6709;&#x4E0B;&#x9650;&quot;before_count&quot;&#x548C;&#x4E0A;&#x9650;&quot;after_count&quot;&#x4EE5;&#x53CA;&#x65F6;&#x95F4;&#x6BB5;&#x3002; &#x901A;&#x8FC7;&#x8FC7;&#x6EE4;&#x5668;&#x7684;&#x4E8B;&#x4EF6;&#x5C06;&#x6839;&#x636E;&#x5176;&#x952E;&#x548C;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x6233;&#x8FDB;&#x884C;&#x8BA1;&#x6570;&#x3002; &#x53EA;&#x8981;&#x8BA1;&#x6570;&#x5C0F;&#x4E8E;&quot;before_count&quot;&#x6216;&#x5927;&#x4E8E;&quot;after_count&quot;&#xFF0C;&#x4E8B;&#x4EF6;&#x5C31;&#x4F1A;&#x88AB;&quot;&#x9650;&#x5236;&quot;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x8FC7;&#x6EE4;&#x5668;&#x5C06;&#x88AB;&#x89C6;&#x4E3A;&#x6210;&#x529F;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x6DFB;&#x52A0;&#xFF08;&#x6216;&#x5220;&#x9664;&#xFF09;&#x4EFB;&#x4F55;&#x6807;&#x8BB0;&#x6216;&#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x8BE5;&#x63D2;&#x4EF6;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x6B63;&#x786E;&#x8DDF;&#x8E2A;&#x8FC7;&#x53BB;&#x7684;&#x4E8B;&#x4EF6;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x8981;&#x9650;&#x5236;&#x4E8B;&#x4EF6;&#x5728;2&#x6B21;&#x51FA;&#x73B0;&#x540E;&#x53EA;&#x6536;&#x5230;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x5728;10&#x5206;&#x949F;&#x5185;&#x5F97;&#x5230;&#x7684;&#x4E8B;&#x4EF6;&#x4E0D;&#x8D85;&#x8FC7;3&#x6B21;&#xFF0C;&#x90A3;&#x4E48;&#x60A8;&#x53EF;&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-sh">period =&gt; 600
+max_age =&gt; 1200
+before_count =&gt; 3
+after_count =&gt; 5
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>event 1 - throttled (successful filter, period start)
+event 2 - throttled (successful filter)
+event 3 - not throttled
+event 4 - not throttled
+event 5 - not throttled
+event 6 - throttled (successful filter)
+event 7 - throttled (successful filter)
+event x - throttled (successful filter)
+period end
+event 1 - throttled (successful filter, period start)
+event 2 - throttled (successful filter)
+event 3 - not throttled
+event 4 - not throttled
+event 5 - not throttled
+event 6 - throttled (successful filter)
+...
+</code></pre><p>&#x53E6;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x662F;&#xFF0C;&#x5F53;&#x4F60;&#x5E0C;&#x671B;&#x6BCF;&#x5C0F;&#x65F6;&#x53EA;&#x6536;&#x5230;1&#x4E2A;&#x4E8B;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-sh">period =&gt; 3600
+max_age =&gt; 7200
+before_count =&gt; -1
+after_count =&gt; 1
+</code></pre>
+<p>&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>event 1 - not throttled (period start)
+event 2 - throttled (successful filter)
+event 3 - throttled (successful filter)
+event 4 - throttled (successful filter)
+event x - throttled (successful filter)
+period end
+event 1 - not throttled (period start)
+event 2 - throttled (successful filter)
+event 3 - throttled (successful filter)
+event 4 - throttled (successful filter)
+...
+</code></pre><p>&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x7528;&#x4F8B;&#x662F;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x4F5C;&#x4E3A;key&#x65F6;&#xFF0C;&#x4F7F;&#x7528;throttle&#x8FC7;&#x6EE4;&#x5668;&#x5BF9;&#x5C0F;&#x4E8E;3&#x548C;&#x5927;&#x4E8E;5&#x7684;&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x9650;&#x5236;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;drop&#x8FC7;&#x6EE4;&#x5668;&#x6765;&#x5220;&#x9664;&#x9650;&#x5236;&#x4E8B;&#x4EF6;&#x3002; &#x6B64;&#x914D;&#x7F6E;&#x53EF;&#x80FD;&#x663E;&#x793A;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    before_count =&gt; 3
+    after_count =&gt; 5
+    period =&gt; 3600
+    max_age =&gt; 7200
+    key =&gt; <span class="hljs-string">&quot;%{host}%{message}&quot;</span>
+    add_tag =&gt; <span class="hljs-string">&quot;throttled&quot;</span>
+  }
+  <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;throttled&quot;</span> <span class="hljs-keyword">in</span> [tags] {
+    drop { }
+  }
+}
+</code></pre>
+<p>&#x53E6;&#x4E00;&#x79CD;&#x60C5;&#x51B5;&#x662F;&#x5B58;&#x50A8;&#x6240;&#x6709;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x4EC5;&#x53D1;&#x9001;&#x975E;&#x9650;&#x5236;&#x4E8B;&#x4EF6;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x53D1;&#x751F;&#x7CFB;&#x7EDF;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;op&#x7684;&#x6536;&#x4EF6;&#x7BB1;&#x4E0D;&#x4F1A;&#x5145;&#x6EE1;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x3002; &#x6B64;&#x914D;&#x7F6E;&#x53EF;&#x80FD;&#x663E;&#x793A;&#x4E3A;&#xFF1A;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    before_count =&gt; 3
+    after_count =&gt; 5
+    period =&gt; 3600
+    max_age =&gt; 7200
+    key =&gt; <span class="hljs-string">&quot;%{message}&quot;</span>
+    add_tag =&gt; <span class="hljs-string">&quot;throttled&quot;</span>
+  }
+}
+output {
+  <span class="hljs-keyword">if</span> <span class="hljs-string">&quot;throttled&quot;</span> not <span class="hljs-keyword">in</span> [tags] {
+    email {
+      from =&gt; <span class="hljs-string">&quot;logstash@mycompany.com&quot;</span>
+      subject =&gt; <span class="hljs-string">&quot;Production System Alert&quot;</span>
+      to =&gt; <span class="hljs-string">&quot;ops@mycompany.com&quot;</span>
+      via =&gt; <span class="hljs-string">&quot;sendmail&quot;</span>
+      body =&gt; <span class="hljs-string">&quot;Alert on %{host} from path %{path}:\n\n%{message}&quot;</span>
+      options =&gt; { <span class="hljs-string">&quot;location&quot;</span> =&gt; <span class="hljs-string">&quot;/usr/sbin/sendmail&quot;</span> }
+    }
+  }
+  elasticsearch_http {
+    host =&gt; <span class="hljs-string">&quot;localhost&quot;</span>
+    port =&gt; <span class="hljs-string">&quot;19200&quot;</span>
+  }
+}
+</code></pre>
+<p>&#x6536;&#x5230;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x4E8B;&#x4EF6;key&#x5B58;&#x50A8;&#x5728;key_cache&#x4E2D;&#xFF0C;&#x5E76;&#x5F15;&#x7528;&#x4E86;&#x65F6;&#x95F4;&#x69FD;&#x7F13;&#x5B58;&#x3002;&#x4E8B;&#x4EF6;&#x6839;&#x636E;&#x65F6;&#x95F4;&#x6233;&#x5206;&#x914D;&#x5230;&#x65F6;&#x95F4;&#x69FD;&#xFF08;&#x52A8;&#x6001;&#x521B;&#x5EFA;&#xFF09;&#x3002;&#x65F6;&#x95F4;&#x69FD;&#x8BA1;&#x6570;&#x5668;&#x9012;&#x589E;&#x3002;&#x5F53;&#x63A5;&#x6536;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;&#xFF08;&#x76F8;&#x540C;&#x7684;key&#xFF09;&#x65F6;&#xFF0C;&#x5728;&#x76F8;&#x540C;&#x7684;&#x201C;&#x5468;&#x671F;&#x201D;&#x5185;&#xFF0C;&#x5B83;&#x88AB;&#x5206;&#x914D;&#x5230;&#x76F8;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x69FD;&#x3002;&#x65F6;&#x95F4;&#x69FD;&#x8BA1;&#x6570;&#x5668;&#x518D;&#x6B21;&#x9012;&#x589E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8D85;&#x8FC7;max_age&#xFF0C;&#x5219;&#x65F6;&#x95F4;&#x69FD;&#x5230;&#x671F;&#x3002;&#x6570;&#x91CF;&#x9650;&#x5236;&#x6839;&#x636E;&#x6700;&#x65B0;&#x4E8B;&#x4EF6;&#x65F6;&#x95F4;&#x6233;&#x548C;max_age&#x914D;&#x7F6E;&#x9009;&#x9879;&#x8BA1;&#x7B97;&#x3002;</p>
+<h3 id="throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;"><a name="throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;" class="anchor-navigation-ex-anchor" href="#throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;" class="plugin-anchor" href="#throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>Throttle&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x9879;</h3>
+<p>&#x6B64;&#x63D2;&#x4EF6;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x4EE5;&#x53CA;&#x7A0D;&#x540E;&#x63CF;&#x8FF0;&#x7684; <a href="#&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;">&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;</a>&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x914D;&#x7F6E;&#x9879;</th>
+<th>&#x8F93;&#x5165;&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#aftercount"><code>after_count</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#beforecount"><code>before_count</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#key"><code>key</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">string</a></td>
+<td>&#x662F;</td>
+</tr>
+<tr>
+<td><a href="#maxage"><code>max_age</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#maxcounters"><code>max_counters</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#period"><code>period</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">string</a></td>
+<td>&#x5426;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x53E6;&#x8BF7;&#x53C2;&#x9605; <a href="#&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;">&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;</a> &#x4EE5;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x8F93;&#x5165;&#x63D2;&#x4EF6;&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x5217;&#x8868;&#x3002;</p>
+<h5 id="aftercount"><a name="aftercount" class="anchor-navigation-ex-anchor" href="#aftercount"><i class="fa fa-link" aria-hidden="true"></i></a><a name="aftercount" class="plugin-anchor" href="#aftercount"><i class="fa fa-link" aria-hidden="true"></i></a><code>after_count</code></h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F;<a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>-1</code></li>
+</ul>
+<p>&#x5927;&#x4E8E;&#x6B64;&#x8BA1;&#x6570;&#x7684;&#x4E8B;&#x4EF6;&#x5C06;&#x53D7;&#x5230;&#x9650;&#x5236;&#x3002;&#x5C06;&#x6B64;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;-1&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#x5C06;&#x5BFC;&#x81F4;&#x4E0D;&#x4F1A;&#x6839;&#x636E;&#x4E0A;&#x9650;&#x9650;&#x5236;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h5 id="beforecount"><a name="beforecount" class="anchor-navigation-ex-anchor" href="#beforecount"><i class="fa fa-link" aria-hidden="true"></i></a><a name="beforecount" class="plugin-anchor" href="#beforecount"><i class="fa fa-link" aria-hidden="true"></i></a><code>before_count</code></h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F;<a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>-1</code></li>
+</ul>
+<p>&#x5C0F;&#x4E8E;&#x6B64;&#x8BA1;&#x6570;&#x7684;&#x4E8B;&#x4EF6;&#x5C06;&#x53D7;&#x5230;&#x9650;&#x5236;&#x3002;&#x5C06;&#x6B64;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;-1&#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#x5C06;&#x5BFC;&#x81F4;&#x4E0D;&#x4F1A;&#x6839;&#x636E;&#x4E0B;&#x9650;&#x9650;&#x5236;&#x4E8B;&#x4EF6;&#x3002;</p>
+<h5 id="key"><a name="key" class="anchor-navigation-ex-anchor" href="#key"><i class="fa fa-link" aria-hidden="true"></i></a><a name="key" class="plugin-anchor" href="#key"><i class="fa fa-link" aria-hidden="true"></i></a><code>key</code></h5>
+<ul>
+<li>&#x8FD9;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x8BBE;&#x7F6E;&#x3002;</li>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F;<a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">string</a></li>
+<li>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x7528;&#x4E8E;&#x8BC6;&#x522B;&#x4E8B;&#x4EF6;&#x7684;&#x5173;&#x952E;&#x3002;&#x5177;&#x6709;&#x76F8;&#x540C;&#x5BC6;&#x94A5;&#x7684;&#x4E8B;&#x4EF6;&#x4F1A;&#x88AB;&#x7EC4;&#x5408;&#x5728;&#x4E00;&#x8D77;&#x3002;&#x5141;&#x8BB8;&#x5B57;&#x6BB5;&#x66FF;&#x6362;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x7EC4;&#x5408;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;</p>
+<h5 id="maxage"><a name="maxage" class="anchor-navigation-ex-anchor" href="#maxage"><i class="fa fa-link" aria-hidden="true"></i></a><a name="maxage" class="plugin-anchor" href="#maxage"><i class="fa fa-link" aria-hidden="true"></i></a><code>max_age</code></h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F;<a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>3600</code></li>
+</ul>
+<p>&#x65F6;&#x95F4;&#x69FD;&#x7684;&#x6700;&#x5927;&#x5E74;&#x9F84;&#x3002;&#x8F83;&#x9AD8;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x8DDF;&#x8E2A;&#x5F02;&#x6B65;&#x4E8B;&#x4EF6;&#x6D41;&#xFF0C;&#x4F46;&#x9700;&#x8981;&#x66F4;&#x591A;&#x5185;&#x5B58;&#x3002;&#x6839;&#x636E;&#x7ECF;&#x9A8C;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x5C06;&#x6B64;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x81F3;&#x5C11;&#x4E24;&#x500D;&#x7684;&#x5468;&#x671F;&#x3002;&#x6216;&#x8005;&#x5C06;&#x6B64;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x5468;&#x671F;+&#x5177;&#x6709;&#x76F8;&#x540C;&#x952E;&#x7684;&#x65E0;&#x5E8F;&#x4E8B;&#x4EF6;&#x4E4B;&#x95F4;&#x7684;&#x6700;&#x5927;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x3002;&#x5982;&#x679C;&#x540C;&#x65F6;&#x5904;&#x7406;&#x65E0;&#x5E8F;&#x4E8B;&#x4EF6;&#xFF0C;&#x5219;&#x4F4E;&#x4E8E;&#x6307;&#x5B9A;&#x65F6;&#x95F4;&#x6BB5;&#x7684;&#x503C;&#x4F1A;&#x4EA7;&#x751F;&#x610F;&#x5916;&#x7ED3;&#x679C;&#x3002;</p>
+<h5 id="maxcounters"><a name="maxcounters" class="anchor-navigation-ex-anchor" href="#maxcounters"><i class="fa fa-link" aria-hidden="true"></i></a><a name="maxcounters" class="plugin-anchor" href="#maxcounters"><i class="fa fa-link" aria-hidden="true"></i></a><code>max_counters</code></h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F;<a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#number">number</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>100000</code></li>
+</ul>
+<p>&#x5728;&#x51CF;&#x5C11;&#x65F6;&#x95F4;&#x69FD;&#x7684;&#x6700;&#x5927;&#x5E74;&#x9F84;&#x4E4B;&#x524D;&#xFF0C;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x6700;&#x5927;&#x8BA1;&#x6570;&#x5668;&#x6570;&#x3002;&#x5C06;&#x6B64;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;-1&#x5C06;&#x53D6;&#x6D88;&#x9650;&#x5236;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x6570;&#x91CF;&#x4E0A;&#x9650;&#x3002;&#x6B64;&#x914D;&#x7F6E;&#x503C;&#x5E94;&#x4EC5;&#x7528;&#x4F5C;&#x5185;&#x5B58;&#x63A7;&#x5236;&#x673A;&#x5236;&#xFF0C;&#x5982;&#x679C;&#x8FBE;&#x5230;&#x8BE5;&#x503C;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x65E9;&#x671F;&#x8BA1;&#x6570;&#x5668;&#x5230;&#x671F;&#x3002;&#x5EFA;&#x8BAE;&#x4FDD;&#x7559;&#x9ED8;&#x8BA4;&#x503C;&#x5E76;&#x786E;&#x4FDD;&#x9009;&#x62E9;key&#xFF0C;&#x4EE5;&#x9650;&#x5236;&#x6240;&#x9700;&#x7684;&#x8BA1;&#x6570;&#x5668;&#x6570;&#x91CF;&#xFF08;&#x5373;&#x4E0D;&#x8981;&#x4F7F;&#x7528;UUID&#x4F5C;&#x4E3A;&#x5BC6;&#x94A5;&#xFF09;&#x3002;</p>
+<h5 id="period"><a name="period" class="anchor-navigation-ex-anchor" href="#period"><i class="fa fa-link" aria-hidden="true"></i></a><a name="period" class="plugin-anchor" href="#period"><i class="fa fa-link" aria-hidden="true"></i></a><code>period</code></h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F;<a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">string</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;<code>&quot;60&quot;</code></li>
+</ul>
+<p>&#x7B2C;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#x7684;&#x79D2;&#x6570;&#xFF0C;&#x76F4;&#x5230;&#x521B;&#x5EFA;&#x65B0;&#x65F6;&#x95F4;&#x69FD;&#x3002;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x552F;&#x4E00;key&#x548C;&#x6BCF;&#x4E2A;&#x65F6;&#x95F4;&#x69FD;&#x8DDF;&#x8E2A;&#x6B64;&#x65F6;&#x6BB5;&#x3002;&#x8BE5;&#x503C;&#x5141;&#x8BB8;&#x5B57;&#x6BB5;&#x66FF;&#x6362;&#xFF0C;&#x5141;&#x8BB8;&#x60A8;&#x6307;&#x5B9A;&#x67D0;&#x4E9B;&#x7C7B;&#x578B;&#x7684;&#x4E8B;&#x4EF6;&#x5728;&#x7279;&#x5B9A;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#x8282;&#x6D41;&#x3002;</p>
+<h3 id="&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;"><a name="&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;" class="plugin-anchor" href="#&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x901A;&#x7528;&#x914D;&#x7F6E;&#x9879;</h3>
+<p>&#x6240;&#x6709;&#x8FC7;&#x6EE4;&#x5668;&#x63D2;&#x4EF6;&#x90FD;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x9009;&#x9879;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x8BBE;&#x7F6E;</th>
+<th>&#x8F93;&#x5165;&#x7C7B;&#x578B;</th>
+<th>&#x5FC5;&#x987B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#addfield"><code>add_field</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#hash">hash</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#addtag"><code>add_tag</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">array</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#enablemetric"><code>enable_metric</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#boolean">boolean</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#id"><code>id</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">string</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#periodicflush"><code>periodic_flush</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#boolean">boolean</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#removefield"><code>remove_field</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">array</a></td>
+<td>&#x5426;</td>
+</tr>
+<tr>
+<td><a href="#removetag"><code>remove_tag</code></a></td>
+<td><a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">array</a></td>
+<td>&#x5426;</td>
+</tr>
+</tbody>
+</table>
+<h5 id="addfield"><a name="addfield" class="anchor-navigation-ex-anchor" href="#addfield"><i class="fa fa-link" aria-hidden="true"></i></a><a name="addfield" class="plugin-anchor" href="#addfield"><i class="fa fa-link" aria-hidden="true"></i></a>add_field</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#hash">hash</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>{}</code></li>
+</ul>
+<p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x5411;&#x6B64;&#x4E8B;&#x4EF6;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;&#x3002;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x53EF;&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>&#xFF05;{field}</code> &#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    add_field =&gt; { <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> =&gt; <span class="hljs-string">&quot;Hello world, from %{host}&quot;</span> }
+  }
+}
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also add multiple fields at once:</span>
+filter {
+  throttle {
+    add_field =&gt; {
+      <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> =&gt; <span class="hljs-string">&quot;Hello world, from %{host}&quot;</span>
+      <span class="hljs-string">&quot;new_field&quot;</span> =&gt; <span class="hljs-string">&quot;new_static_value&quot;</span>
+    }
+  }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x5177;&#x6709;&#x5B57;&#x6BB5; <code>&quot;somefield&quot; == &quot;hello&quot;</code> &#xFF0C;&#x5219;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#x65F6;&#x5C06;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5; <code>foo_hello</code> &#xFF08;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF09;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x503C;&#x548C; <code>%{host}</code> &#x90E8;&#x5206;&#x66FF;&#x6362;&#x4E3A;&#x4E8B;&#x4EF6;&#x4E2D;&#x7684;&#x8BE5;&#x503C;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;&#x8FD8;&#x4F1A;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x786C;&#x7F16;&#x7801;&#x5B57;&#x6BB5;&#x3002;</p>
+<h5 id="addtag"><a name="addtag" class="anchor-navigation-ex-anchor" href="#addtag"><i class="fa fa-link" aria-hidden="true"></i></a><a name="addtag" class="plugin-anchor" href="#addtag"><i class="fa fa-link" aria-hidden="true"></i></a>add_tag</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">array</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>[]</code></li>
+</ul>
+<p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x5411;&#x4E8B;&#x4EF6;&#x6DFB;&#x52A0;&#x4EFB;&#x610F;&#x6807;&#x8BB0;&#x3002;&#x6807;&#x7B7E;&#x53EF;&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>%{field}</code> &#x8BED;&#x6CD5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    add_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
+  }
+}
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also add multiple tags at once:</span>
+filter {
+  throttle {
+    add_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;taggedy_tag&quot;</span>]
+  }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x5177;&#x6709;&#x5B57;&#x6BB5; <code>&quot;somefield&quot; == &quot;hello&quot;</code> &#xFF0C;&#x5219;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#x65F6;&#x5C06;&#x6DFB;&#x52A0;&#x6807;&#x8BB0; <code>foo_hello</code>&#xFF08;&#x7B2C;&#x4E8C;&#x4E2A;&#x793A;&#x4F8B;&#x5F53;&#x7136;&#x4F1A;&#x6DFB;&#x52A0; <code>taggedy_tag</code> &#x6807;&#x8BB0;&#xFF09;&#x3002;</p>
+<h5 id="enablemetric"><a name="enablemetric" class="anchor-navigation-ex-anchor" href="#enablemetric"><i class="fa fa-link" aria-hidden="true"></i></a><a name="enablemetric" class="plugin-anchor" href="#enablemetric"><i class="fa fa-link" aria-hidden="true"></i></a>enable_metric</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#boolean">boolean</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>true</code></li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7981;&#x7528;&#x6216;&#x542F;&#x7528;&#x6B64;&#x63D2;&#x4EF6;&#x5B9E;&#x4F8B;&#x7684;&#x6307;&#x6807;&#x8BB0;&#x5F55;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x8BB0;&#x5F55;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x5EA6;&#x91CF;&#x6807;&#x51C6;&#xFF0C;&#x4F46;&#x60A8;&#x53EF;&#x4EE5;&#x7981;&#x7528;&#x7279;&#x5B9A;&#x63D2;&#x4EF6;&#x7684;&#x6307;&#x6807;&#x6536;&#x96C6;&#x3002;</p>
+<h5 id="id"><a name="id" class="anchor-navigation-ex-anchor" href="#id"><i class="fa fa-link" aria-hidden="true"></i></a><a name="id" class="plugin-anchor" href="#id"><i class="fa fa-link" aria-hidden="true"></i></a>id</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#string">string</a></li>
+<li>&#x6B64;&#x8BBE;&#x7F6E;&#x6CA1;&#x6709;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x4E3A;&#x63D2;&#x4EF6;&#x914D;&#x7F6E;&#x6DFB;&#x52A0;&#x552F;&#x4E00; <code>ID</code>&#x3002;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;ID&#xFF0C;Logstash&#x5C06;&#x751F;&#x6210;&#x4E00;&#x4E2A;ID&#x3002;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x5728;&#x914D;&#x7F6E;&#x4E2D;&#x8BBE;&#x7F6E;&#x6B64;ID&#x3002;&#x5F53;&#x60A8;&#x6709;&#x4E24;&#x4E2A;&#x6216;&#x66F4;&#x591A;&#x76F8;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x63D2;&#x4EF6;&#x65F6;&#xFF0C;&#x8FD9;&#x5C24;&#x5176;&#x6709;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x6709;2&#x4E2A;http&#x8FC7;&#x6EE4;&#x5668;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x6DFB;&#x52A0;&#x547D;&#x540D;ID&#x5C06;&#x6709;&#x52A9;&#x4E8E;&#x5728;&#x4F7F;&#x7528;&#x76D1;&#x89C6;API&#x65F6;&#x76D1;&#x89C6;Logstash&#x3002;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    id =&gt; <span class="hljs-string">&quot;ABC&quot;</span>
+  }
+}
+</code></pre>
+<h5 id="periodicflush"><a name="periodicflush" class="anchor-navigation-ex-anchor" href="#periodicflush"><i class="fa fa-link" aria-hidden="true"></i></a><a name="periodicflush" class="plugin-anchor" href="#periodicflush"><i class="fa fa-link" aria-hidden="true"></i></a>periodic_flush</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#boolean">boolean</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>false</code></li>
+</ul>
+<p>&#x5B9A;&#x671F;&#x8C03;&#x7528;&#x8FC7;&#x6EE4;&#x5668;&#x5237;&#x65B0;&#x65B9;&#x6CD5;&#x3002;&#x53EF;&#x9009;&#x7684;&#x3002;</p>
+<h5 id="removefield"><a name="removefield" class="anchor-navigation-ex-anchor" href="#removefield"><i class="fa fa-link" aria-hidden="true"></i></a><a name="removefield" class="plugin-anchor" href="#removefield"><i class="fa fa-link" aria-hidden="true"></i></a>remove_field</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">array</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>[]</code></li>
+</ul>
+<p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#xFF0C;&#x8BF7;&#x4ECE;&#x6B64;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x610F;&#x5B57;&#x6BB5;&#x3002;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    remove_field =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
+  }
+}
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also remove multiple fields at once:</span>
+filter {
+  throttle {
+    remove_field =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;my_extraneous_field&quot;</span> ]
+  }
+}
+</code></pre>
+<h5 id="removetag"><a name="removetag" class="anchor-navigation-ex-anchor" href="#removetag"><i class="fa fa-link" aria-hidden="true"></i></a><a name="removetag" class="plugin-anchor" href="#removetag"><i class="fa fa-link" aria-hidden="true"></i></a>remove_tag</h5>
+<ul>
+<li>&#x503C;&#x7C7B;&#x578B;&#x662F; <a href="../06-Configuring-Logstash/Structure-of-a-Config-File.html#array">array</a></li>
+<li>&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <code>[]</code></li>
+</ul>
+<p>&#x5982;&#x679C;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x914D;&#x7F6E;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x4ECE;&#x4E8B;&#x4EF6;&#x4E2D;&#x5220;&#x9664;&#x4EFB;&#x610F;tag&#x3002;tag&#x4EE5;&#x662F;&#x52A8;&#x6001;&#x7684;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>%{field}</code> &#x8BED;&#x6CD5;&#x5305;&#x542B;&#x4E8B;&#x4EF6;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x3002;</p>
+<p>&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh">filter {
+  throttle {
+    remove_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span> ]
+  }
+}
+</code></pre>
+<pre><code class="lang-sh"><span class="hljs-comment"># You can also remove multiple tags at once:</span>
+filter {
+  throttle {
+    remove_tag =&gt; [ <span class="hljs-string">&quot;foo_%{somefield}&quot;</span>, <span class="hljs-string">&quot;sad_unwanted_tag&quot;</span>]
+  }
+}
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E8B;&#x4EF6;&#x5177;&#x6709;&#x5B57;&#x6BB5; <code>&quot;somefield&quot; == &quot;hello&quot;</code> &#xFF0C;&#x5219;&#x6B64;&#x8FC7;&#x6EE4;&#x5668;&#x6210;&#x529F;&#x65F6;&#x5C06;&#x5220;&#x9664;&#x6807;&#x8BB0; foo_hello&#xFF08;&#x5982;&#x679C;&#x5B58;&#x5728;&#xFF09;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F8B;&#x5B50;&#x4E5F;&#x4F1A;&#x5220;&#x9664;&#x4E00;&#x4E2A;&#x4E0D;&#x9700;&#x8981;&#x7684;&#x6807;&#x7B7E;&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -3734,7 +4070,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"throttle","level":"1.1.19.36","depth":3,"next":{"title":"tld","level":"1.1.19.37","depth":3,"path":"19-Filter-plugins/tld.md","ref":"19-Filter-plugins/tld.md","articles":[]},"previous":{"title":"syslog_pri","level":"1.1.19.35","depth":3,"path":"19-Filter-plugins/syslog_pri.md","ref":"19-Filter-plugins/syslog_pri.md","articles":[]},"dir":"neutral"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"19-Filter-plugins/throttle.md","mtime":"2019-03-30T12:44:26.512Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T08:01:27.813Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"throttle","level":"1.1.19.36","depth":3,"next":{"title":"tld","level":"1.1.19.37","depth":3,"path":"19-Filter-plugins/tld.md","ref":"19-Filter-plugins/tld.md","articles":[]},"previous":{"title":"syslog_pri","level":"1.1.19.35","depth":3,"path":"19-Filter-plugins/syslog_pri.md","ref":"19-Filter-plugins/syslog_pri.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"19-Filter-plugins/throttle.md","mtime":"2019-04-28T09:23:41.209Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T09:56:09.999Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
