@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>相关资料 · Logstash 6.7 用户指南中文版</title>
+        <title>引用事件字段详解 · Logstash 6.7 用户指南中文版</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -64,10 +64,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Field-References-Deep-Dive.html" />
     
-    
-    <link rel="prev" href="../26-Breaking-Changes/" />
+    <link rel="prev" href="./" />
     
 
     <style>
@@ -504,12 +502,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6.6" data-path="../06-Configuring-Logstash/Pipeline-to-Pipeline-Communication-(Beta">
+        <li class="chapter " data-level="1.1.6.6" data-path="../06-Configuring-Logstash/Pipeline-to-Pipeline-Communication.html">
             
-                <span>
+                <a href="../06-Configuring-Logstash/Pipeline-to-Pipeline-Communication.html">
             
                     
-                    管道间通信
+                    管道间通信（Beta）
             
                 </a>
             
@@ -782,9 +780,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.9.3" data-path="../09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
+        <li class="chapter " data-level="1.1.9.3" data-path="../09-Working-with-Filebeat-Modules/Example-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
             
-                <a href="../09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
+                <a href="../09-Working-with-Filebeat-Modules/Example-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
             
                     
                     示例：安装Filebeat并连接Kafka和Logstash
@@ -3609,7 +3607,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.27" data-path="./">
+        <li class="chapter " data-level="1.1.27" data-path="./">
             
                 <a href="./">
             
@@ -3623,7 +3621,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.27.1" data-path="Field-References-Deep-Dive.html">
+        <li class="chapter active" data-level="1.1.27.1" data-path="Field-References-Deep-Dive.html">
             
                 <a href="Field-References-Deep-Dive.html">
             
@@ -3676,7 +3674,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >相关资料</a>
+        <a href=".." >引用事件字段详解</a>
     </h1>
 </div>
 
@@ -3691,10 +3689,100 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x76F8;&#x5173;&#x8D44;&#x6599;"><b></b>&#x76F8;&#x5173;&#x8D44;&#x6599;</a></li></ul></div><a href="#&#x76F8;&#x5173;&#x8D44;&#x6599;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x76F8;&#x5173;&#x8D44;&#x6599;"><a name="&#x76F8;&#x5173;&#x8D44;&#x6599;" class="anchor-navigation-ex-anchor" href="#&#x76F8;&#x5173;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x76F8;&#x5173;&#x8D44;&#x6599;" class="plugin-anchor" href="#&#x76F8;&#x5173;&#x8D44;&#x6599;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76F8;&#x5173;&#x8D44;&#x6599;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><li><span class="title-icon "></span><a href="#&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;"><b></b>&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;"><b></b>&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;"><a name="&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;" class="anchor-navigation-ex-anchor" href="#&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;" class="plugin-anchor" href="#&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BE6;&#x89E3;</h2>
+<p>&#x901A;&#x8FC7;&#x540D;&#x79F0;&#x5F15;&#x7528;&#x5B57;&#x6BB5;&#x6216;&#x5B57;&#x6BB5;&#x96C6;&#x5408;&#x901A;&#x5E38;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Logstash&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;&#x8FBE;&#x6210;&#x6B64;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x8BBF;&#x95EE;&#x5B57;&#x6BB5;&#x7684;&#x8BED;&#x6CD5;&#x9700;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF0C;&#x4F7F;&#x6BCF;&#x4E2A;&#x7247;&#x6BB5;&#x90FD;&#x5305;&#x542B;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x3002;</p>
+<p>&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x53EF;&#x4EE5;&#x5728;&#x7BA1;&#x9053;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x4E2D;&#x4F9D;&#x6B21;&#x6807;&#x660E;&#xFF0C;&#x4F5C;&#x4E3A;&#x7BA1;&#x9053;&#x63D2;&#x4EF6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x53C2;&#x6570;&#xFF0C;&#x6216;&#x8005;&#x7BA1;&#x9053;&#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x7684;sprintf&#x8BED;&#x53E5;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-yaml">filter {
+  <span class="hljs-comment">#  +----literal----+     +----literal----+</span>
+  <span class="hljs-comment">#  |               |     |               |</span>
+  if [@metadata][date] and [@metadata][time] {
+    mutate {
+      add_field {
+        <span class="hljs-string">&quot;[@metadata][timestamp]&quot;</span> =&gt; <span class="hljs-string">&quot;<span class="hljs-template-variable">%{[@metadata][date]}</span> <span class="hljs-template-variable">%{[@metadata][time]}</span>&quot;</span>
+      <span class="hljs-comment"># |                      |    |  |               |    |               | |</span>
+      <span class="hljs-comment"># +----string-argument---+    |  +--field-ref----+    +--field-ref----+ |</span>
+      <span class="hljs-comment">#                             +-------- sprintf format string ----------+</span>
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;"><a name="&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;" class="plugin-anchor" href="#&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;</h3>
+<p>&#x4E0B;&#x9762;&#x662F;Field Reference&#x7684;&#x6B63;&#x5F0F;&#x8BED;&#x6CD5;&#xFF0C;&#x9644;&#x6709;&#x6CE8;&#x91CA;&#x548C;&#x793A;&#x4F8B;&#x3002;</p>
+<h4 id="&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;"><a name="&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;" class="plugin-anchor" href="#&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;</h4>
+<p>&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;&#x662F;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#x7247;&#x6BB5;&#x7684;&#x5E8F;&#x5217;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;Logstash&#x7BA1;&#x9053; <a href="../06-Configuring-Logstash/Accessing-Event-Data-and-Fields-in-the-Configuration.html#&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;">&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;</a> &#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x5F15;&#x7528;&#xFF08;&#x4F8B;&#x5982; <code>[request]</code>&#xFF0C;<code>[response][status]</code>&#xFF09;&#x3002;</p>
+<pre><code class="lang-js">fieldReferenceLiteral
+  : ( pathFragment )+
+  ;
+</code></pre>
+<h4 id="&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF08;&#x4E8B;&#x4EF6;api&#xFF09;"><a name="&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF08;&#x4E8B;&#x4EF6;api&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF08;&#x4E8B;&#x4EF6;api&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF08;&#x4E8B;&#x4EF6;api&#xFF09;" class="plugin-anchor" href="#&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF08;&#x4E8B;&#x4EF6;api&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF08;&#x4E8B;&#x4EF6;API&#xFF09;</h4>
+<p>&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x6216;&#x4F7F;&#x7528;sprintf&#x8BED;&#x6CD5;&#x7684;&#x4E8B;&#x4EF6;API&#xFF0C;&#x6BD4;&#x5B83;&#x4EEC;&#x4F5C;&#x4E3A;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x6240;&#x63A5;&#x53D7;&#x7684;&#x7BA1;&#x9053;&#x8BED;&#x6CD5;&#x66F4;&#x7075;&#x6D3B;&#x3002; &#x9876;&#x7EA7;&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5176;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x76F4;&#x63A5;&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x4F7F;&#x7528;&#x65B9;&#x62EC;&#x53F7;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x6709;&#x4E00;&#x4E9B;&#x652F;&#x6301;&#xFF0C;&#x7B80;&#x5316;&#x4E86;&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x751F;&#x6210;&#x7684;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x901A;&#x8FC7;&#x4E8B;&#x4EF6;API&#x8FDB;&#x884C;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x573A;&#x666F;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li><a href="Field-References-Deep-Dive.html">&#x5F15;&#x7528;&#x4E8B;&#x4EF6;&#x5B57;&#x6BB5;&#x8BE6;&#x89E3;</a></li>
+<li>&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x8BED;&#x6CD5;; </li>
+<li>&#x5355;&#x4E2A;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#xFF08;&#x5F15;&#x7528;&#x9876;&#x7EA7;&#x5B57;&#x6BB5;&#xFF09;; </li>
+<li>&#x5355;&#x4E2A;&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x3002;</li>
 </ul>
+<pre><code class="lang-js">eventApiFieldReference
+  : fieldReferenceLiteral
+  | fieldName
+  | compositeFieldReference
+  ;
+</code></pre>
+<h4 id="&#x8DEF;&#x5F84;&#x7247;&#x6BB5;"><a name="&#x8DEF;&#x5F84;&#x7247;&#x6BB5;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x5F84;&#x7247;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x8DEF;&#x5F84;&#x7247;&#x6BB5;" class="plugin-anchor" href="#&#x8DEF;&#x5F84;&#x7247;&#x6BB5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8DEF;&#x5F84;&#x7247;&#x6BB5;</h4>
+<p>&#x8DEF;&#x5F84;&#x7247;&#x6BB5;&#x662F;&#x6307;&#x7528;&#x65B9;&#x62EC;&#x53F7;&#x5305;&#x62EC;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;<code>[request]</code>&#xFF09;</p>
+<pre><code class="lang-js">pathFragment
+  : <span class="hljs-string">&apos;[&apos;</span> fieldName <span class="hljs-string">&apos;]&apos;</span>
+  ;
+</code></pre>
+<h4 id="&#x5B57;&#x6BB5;&#x540D;"><a name="&#x5B57;&#x6BB5;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x6BB5;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5B57;&#x6BB5;&#x540D;" class="plugin-anchor" href="#&#x5B57;&#x6BB5;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x6BB5;&#x540D;</h4>
+<p>&#x5B57;&#x6BB5;&#x540D;&#x6307;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x53EF;&#x4E3A; <code>[</code> &#x6216; <code>]</code>&#xFF09;</p>
+<pre><code class="lang-yaml">fieldName
+  : ( ~( <span class="hljs-string">&apos;[&apos;</span> | <span class="hljs-string">&apos;]&apos;</span> ) )+
+  ;
+</code></pre>
+<h4 id="&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;"><a name="&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;" class="plugin-anchor" href="#&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;</h4>
+<p>&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x4EE5;&#x7F16;&#x7A0B;&#x65B9;&#x5F0F;&#x5F15;&#x7528;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x4ECE;&#x800C;&#x7EC4;&#x6210;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x64CD;&#x4F5C;&#x63D2;&#x4EF6;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x65F6;&#xFF0C;&#x6216;&#x4F7F;&#x7528;Ruby Filter&#x63D2;&#x4EF6;&#x548C;Event API&#x65F6;&#x3002;</p>
+<pre><code class="lang-yaml">fieldReference = <span class="hljs-string">&quot;[path][to][deep nested field]&quot;</span>
+compositeFieldReference = <span class="hljs-string">&quot;[@metadata][#{fieldReference}][size]&quot;</span>
+<span class="hljs-comment"># =&gt; &quot;[@metadata][[path][to][deep nested field]][size]&quot;</span>
+</code></pre>
+<h4 id="&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;"><a name="&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;" class="plugin-anchor" href="#&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;</h4>
+<table>
+<thead>
+<tr>
+<th>&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;</th>
+<th>&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5178;&#x578B;&#x6837;&#x4F8B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+[[deep][nesting]][field]+</code></td>
+<td><code>+[deep][nesting][field]+</code></td>
+</tr>
+<tr>
+<td><code>+[foo][[bar]][bingo]+</code></td>
+<td><code>+[foo][bar][bingo]+</code></td>
+</tr>
+<tr>
+<td><code>+[[ok]]+</code></td>
+<td><code>+[ok]+</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x662F;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8DEF;&#x5F84;&#x7247;&#x6BB5;&#xFF0C;&#x6216;&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x5E8F;&#x5217;&#x3002;</p>
+<pre><code class="lang-js">compositeFieldReference
+  : ( pathFragment | embeddedFieldReference )+
+  ;
+</code></pre>
+<p>&#x4E8B;&#x4EF6;API&#x652F;&#x6301;&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF0C;&#x4F46;&#x7BA1;&#x9053;&#x914D;&#x7F6E;&#x4E2D;&#x4E0D;&#x652F;&#x6301;&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x3002;</p>
+<h4 id="&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;"><a name="&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;" class="plugin-anchor" href="#&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5D4C;&#x5165;&#x5B57;&#x6BB5;&#x5F15;&#x7528;</h4>
+<pre><code class="lang-js">embeddedFieldReference
+  : <span class="hljs-string">&apos;[&apos;</span> fieldReference <span class="hljs-string">&apos;]&apos;</span>
+  ;
+</code></pre>
+<p>&#x5D4C;&#x5165;&#x5F0F;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#xFF0C;&#x5B83;&#x672C;&#x8EAB;&#x5305;&#x542B;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#xFF08; <code>[</code> &#x548C; <code>]</code> &#xFF09;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x590D;&#x5408;&#x5B57;&#x6BB5;&#x5F15;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x3002;</p>
 
                                 
                                 </section>
@@ -3722,14 +3810,10 @@
 
             
                 
-                <a href="../26-Breaking-Changes/" class="navigation navigation-prev " aria-label="Previous page: 第26章-重大变更">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 相关资料">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="Field-References-Deep-Dive.html" class="navigation navigation-next " aria-label="Next page: 引用事件字段详解">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -3738,7 +3822,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"相关资料","level":"1.1.27","depth":2,"next":{"title":"引用事件字段详解","level":"1.1.27.1","depth":3,"path":"00-Others/Field-References-Deep-Dive.md","ref":"00-Others/Field-References-Deep-Dive.md","articles":[]},"previous":{"title":"第26章-重大变更","level":"1.1.26","depth":2,"path":"26-Breaking-Changes/README.md","ref":"26-Breaking-Changes/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"00-Others/README.md","mtime":"2019-04-28T05:34:26.023Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T09:56:09.999Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"引用事件字段详解","level":"1.1.27.1","depth":3,"previous":{"title":"相关资料","level":"1.1.27","depth":2,"path":"99-Others/README.md","ref":"99-Others/README.md","articles":[{"title":"引用事件字段详解","level":"1.1.27.1","depth":3,"path":"99-Others/Field-References-Deep-Dive.md","ref":"99-Others/Field-References-Deep-Dive.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"99-Others/Field-References-Deep-Dive.md","mtime":"2019-04-29T08:48:25.076Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T05:19:21.950Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

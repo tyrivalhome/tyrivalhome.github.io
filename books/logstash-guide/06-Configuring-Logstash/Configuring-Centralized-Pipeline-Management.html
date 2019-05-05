@@ -504,12 +504,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6.6" data-path="Pipeline-to-Pipeline-Communication-(Beta">
+        <li class="chapter " data-level="1.1.6.6" data-path="Pipeline-to-Pipeline-Communication.html">
             
-                <span>
+                <a href="Pipeline-to-Pipeline-Communication.html">
             
                     
-                    管道间通信
+                    管道间通信（Beta）
             
                 </a>
             
@@ -782,9 +782,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.9.3" data-path="../09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
+        <li class="chapter " data-level="1.1.9.3" data-path="../09-Working-with-Filebeat-Modules/Example-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
             
-                <a href="../09-Working-with-Filebeat-Modules/Example:-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
+                <a href="../09-Working-with-Filebeat-Modules/Example-Set-up-Filebeat-modules-to-work-with-Kafka-and-Logstash.html">
             
                     
                     示例：安装Filebeat并连接Kafka和Logstash
@@ -3609,9 +3609,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.27" data-path="../00-Others/">
+        <li class="chapter " data-level="1.1.27" data-path="../99-Others/">
             
-                <a href="../00-Others/">
+                <a href="../99-Others/">
             
                     
                     相关资料
@@ -3623,9 +3623,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.27.1" data-path="../00-Others/Field-References-Deep-Dive.html">
+        <li class="chapter " data-level="1.1.27.1" data-path="../99-Others/Field-References-Deep-Dive.html">
             
-                <a href="../00-Others/Field-References-Deep-Dive.html">
+                <a href="../99-Others/Field-References-Deep-Dive.html">
             
                     
                     引用事件字段详解
@@ -3725,27 +3725,27 @@ xpack.management.elasticsearch.password: t0p.s3cr3t
 xpack.management.logstash.poll_interval: <span class="hljs-number">5</span>s
 xpack.management.pipeline.id: [<span class="hljs-string">&quot;apache&quot;</span>, <span class="hljs-string">&quot;cloudwatch_logs&quot;</span>]
 </code></pre>
-<p><code>xpack.management.enabled</code>
-    &#x8BBE;&#x7F6E;&#x4E3A; <code>true</code> &#x4EE5;&#x542F;&#x7528;Logstash&#x7684;X-Pack&#x96C6;&#x4E2D;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x3002;
-<code>xpack.management.logstash.poll_interval</code>
-    Logstash&#x5B9E;&#x4F8B;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x8F6E;&#x8BE2;Elasticsearch&#x7684;&#x7BA1;&#x9053;&#x66F4;&#x6539;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;5&#x79D2;&#x3002;
-<code>xpack.management.pipeline.id</code>
-    &#x6307;&#x5B9A;&#x7BA1;&#x9053;ID&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF0C;&#x6CE8;&#x518C;&#x96C6;&#x4E2D;&#x7BA1;&#x9053;&#x7BA1;&#x7406;&#x3002;&#x66F4;&#x6539;&#x6B64;&#x8BBE;&#x7F6E;&#x540E;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x542F;&#x52A8;Logstash&#x4F7F;&#x66F4;&#x6539;&#x751F;&#x6548;&#x3002;
-<code>xpack.management.elasticsearch.hosts</code>
-    &#x5C06;&#x5B58;&#x50A8;Logstash&#x7BA1;&#x9053;&#x914D;&#x7F6E;&#x548C;&#x5143;&#x6570;&#x636E;&#x7684;Elasticsearch&#x5B9E;&#x4F8B;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x4E0E;Logstash&#x914D;&#x7F6E;&#x7684;&#x8F93;&#x51FA;&#x90E8;&#x5206;&#x4E2D;&#x6307;&#x5B9A;&#x7684;Elasticsearch&#x5B9E;&#x4F8B;&#x76F8;&#x540C;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5176;&#x4ED6;&#x5B9E;&#x4F8B;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; <code>http://localhost:9200</code>&#x3002;
-<code>xpack.management.elasticsearch.username&#x548C;xpack.management.elasticsearch.password</code>
-    &#x5982;&#x679C;&#x60A8;&#x7684;Elasticsearch&#x96C6;&#x7FA4;&#x53D7;&#x57FA;&#x672C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x4FDD;&#x62A4;&#xFF0C;&#x5219;&#x8FD9;&#x4E9B;&#x8BBE;&#x7F6E;&#x63D0;&#x4F9B;Logstash&#x5B9E;&#x4F8B;&#x7528;&#x4E8E;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x4EE5;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x3002;&#x60A8;&#x5728;&#x6B64;&#x5904;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x540D;&#x5E94;&#x5177;&#x6709; <code>logstash_admin</code> &#x89D2;&#x8272;&#xFF0C;&#x8BE5;&#x89D2;&#x8272;&#x63D0;&#x4F9B;&#x5BF9; <code>.logstash- *</code> &#x7D22;&#x5F15;&#x7684;&#x8BBF;&#x95EE;&#x4EE5;&#x7BA1;&#x7406;&#x914D;&#x7F6E;&#x3002;
-<code>xpack.management.elasticsearch.ssl.certificate_authority</code>
-    &#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F7F;&#x60A8;&#x53EF;&#x4EE5;&#x4E3A;Elasticsearch&#x5B9E;&#x4F8B;&#x7684;&#x8BC1;&#x4E66;&#x9881;&#x53D1;&#x673A;&#x6784;&#x6307;&#x5B9A; <code>.pem</code> &#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;
-<code>xpack.management.elasticsearch.ssl.truststore.path</code>
-    &#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x63D0;&#x4F9B;Java&#x5BC6;&#x94A5;&#x5E93;&#xFF08;JKS&#xFF09;&#x7684;&#x8DEF;&#x5F84;&#x4EE5;&#x9A8C;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BC1;&#x4E66;&#x3002;
-<code>xpack.management.elasticsearch.ssl.truststore.password</code>
-    &#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E3A;&#x4FE1;&#x4EFB;&#x5E93;&#x63D0;&#x4F9B;&#x5BC6;&#x7801;&#x3002;
-<code>xpack.management.elasticsearch.ssl.keystore.path</code>
-    &#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x63D0;&#x4F9B;Java&#x5BC6;&#x94A5;&#x5E93;&#xFF08;JKS&#xFF09;&#x7684;&#x8DEF;&#x5F84;&#x4EE5;&#x9A8C;&#x8BC1;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BC1;&#x4E66;&#x3002;
-<code>xpack.management.elasticsearch.ssl.keystore.password</code>
-    &#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E3A;&#x5BC6;&#x94A5;&#x5E93;&#x63D0;&#x4F9B;&#x5BC6;&#x7801;&#x3002;</p>
-
+<p><code>xpack.management.enabled</code></p>
+<pre><code>&#x8BBE;&#x7F6E;&#x4E3A; `true` &#x4EE5;&#x542F;&#x7528;Logstash&#x7684;X-Pack&#x96C6;&#x4E2D;&#x914D;&#x7F6E;&#x7BA1;&#x7406;&#x3002;
+</code></pre><p><code>xpack.management.logstash.poll_interval</code></p>
+<pre><code>Logstash&#x5B9E;&#x4F8B;&#x591A;&#x957F;&#x65F6;&#x95F4;&#x8F6E;&#x8BE2;Elasticsearch&#x7684;&#x7BA1;&#x9053;&#x66F4;&#x6539;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;5&#x79D2;&#x3002;
+</code></pre><p><code>xpack.management.pipeline.id</code></p>
+<pre><code>&#x6307;&#x5B9A;&#x7BA1;&#x9053;ID&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF0C;&#x6CE8;&#x518C;&#x96C6;&#x4E2D;&#x7BA1;&#x9053;&#x7BA1;&#x7406;&#x3002;&#x66F4;&#x6539;&#x6B64;&#x8BBE;&#x7F6E;&#x540E;&#xFF0C;&#x60A8;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x542F;&#x52A8;Logstash&#x4F7F;&#x66F4;&#x6539;&#x751F;&#x6548;&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.hosts</code></p>
+<pre><code>&#x5C06;&#x5B58;&#x50A8;Logstash&#x7BA1;&#x9053;&#x914D;&#x7F6E;&#x548C;&#x5143;&#x6570;&#x636E;&#x7684;Elasticsearch&#x5B9E;&#x4F8B;&#x3002;&#x8FD9;&#x53EF;&#x80FD;&#x4E0E;Logstash&#x914D;&#x7F6E;&#x7684;&#x8F93;&#x51FA;&#x90E8;&#x5206;&#x4E2D;&#x6307;&#x5B9A;&#x7684;Elasticsearch&#x5B9E;&#x4F8B;&#x76F8;&#x540C;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5176;&#x4ED6;&#x5B9E;&#x4F8B;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A; `http://localhost:9200`&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.username&#x548C;xpack.management.elasticsearch.password</code></p>
+<pre><code>&#x5982;&#x679C;&#x60A8;&#x7684;Elasticsearch&#x96C6;&#x7FA4;&#x53D7;&#x57FA;&#x672C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x4FDD;&#x62A4;&#xFF0C;&#x5219;&#x8FD9;&#x4E9B;&#x8BBE;&#x7F6E;&#x63D0;&#x4F9B;Logstash&#x5B9E;&#x4F8B;&#x7528;&#x4E8E;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x4EE5;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x7684;&#x7528;&#x6237;&#x540D;&#x548C;&#x5BC6;&#x7801;&#x3002;&#x60A8;&#x5728;&#x6B64;&#x5904;&#x6307;&#x5B9A;&#x7684;&#x7528;&#x6237;&#x540D;&#x5E94;&#x5177;&#x6709; `logstash_admin` &#x89D2;&#x8272;&#xFF0C;&#x8BE5;&#x89D2;&#x8272;&#x63D0;&#x4F9B;&#x5BF9; `.logstash- *` &#x7D22;&#x5F15;&#x7684;&#x8BBF;&#x95EE;&#x4EE5;&#x7BA1;&#x7406;&#x914D;&#x7F6E;&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.ssl.certificate_authority</code></p>
+<pre><code>&#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F7F;&#x60A8;&#x53EF;&#x4EE5;&#x4E3A;Elasticsearch&#x5B9E;&#x4F8B;&#x7684;&#x8BC1;&#x4E66;&#x9881;&#x53D1;&#x673A;&#x6784;&#x6307;&#x5B9A; `.pem` &#x6587;&#x4EF6;&#x7684;&#x8DEF;&#x5F84;&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.ssl.truststore.path</code></p>
+<pre><code>&#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x63D0;&#x4F9B;Java&#x5BC6;&#x94A5;&#x5E93;&#xFF08;JKS&#xFF09;&#x7684;&#x8DEF;&#x5F84;&#x4EE5;&#x9A8C;&#x8BC1;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8BC1;&#x4E66;&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.ssl.truststore.password</code></p>
+<pre><code>&#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E3A;&#x4FE1;&#x4EFB;&#x5E93;&#x63D0;&#x4F9B;&#x5BC6;&#x7801;&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.ssl.keystore.path</code></p>
+<pre><code>&#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x63D0;&#x4F9B;Java&#x5BC6;&#x94A5;&#x5E93;&#xFF08;JKS&#xFF09;&#x7684;&#x8DEF;&#x5F84;&#x4EE5;&#x9A8C;&#x8BC1;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BC1;&#x4E66;&#x3002;
+</code></pre><p><code>xpack.management.elasticsearch.ssl.keystore.password</code></p>
+<pre><code>&#x53EF;&#x9009;&#x8BBE;&#x7F6E;&#xFF0C;&#x4E3A;&#x5BC6;&#x94A5;&#x5E93;&#x63D0;&#x4F9B;&#x5BC6;&#x7801;&#x3002;
+</code></pre>
                                 
                                 </section>
                             
@@ -3788,7 +3788,7 @@ xpack.management.pipeline.id: [<span class="hljs-string">&quot;apache&quot;</spa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"配置集中管理管道","level":"1.1.6.12","depth":3,"next":{"title":"X-Pack监控","level":"1.1.6.13","depth":3,"path":"06-Configuring-Logstash/X-Pack-monitoring.md","ref":"06-Configuring-Logstash/X-Pack-monitoring.md","articles":[]},"previous":{"title":"实例间通信","level":"1.1.6.11","depth":3,"path":"06-Configuring-Logstash/Logstash-to-Logstash-Communication.md","ref":"06-Configuring-Logstash/Logstash-to-Logstash-Communication.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"06-Configuring-Logstash/Configuring-Centralized-Pipeline-Management.md","mtime":"2019-04-02T09:10:26.029Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T09:56:09.999Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"配置集中管理管道","level":"1.1.6.12","depth":3,"next":{"title":"X-Pack监控","level":"1.1.6.13","depth":3,"path":"06-Configuring-Logstash/X-Pack-monitoring.md","ref":"06-Configuring-Logstash/X-Pack-monitoring.md","articles":[]},"previous":{"title":"实例间通信","level":"1.1.6.11","depth":3,"path":"06-Configuring-Logstash/Logstash-to-Logstash-Communication.md","ref":"06-Configuring-Logstash/Logstash-to-Logstash-Communication.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","github","github-buttons","sharing-plus","anchor-navigation-ex"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"github":{"url":"https://github.com/tyrival"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"Tyrival","repo":"gitbook","type":"star","size":"small","count":false}]},"expandable-chapters-small":{},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"Tyrival","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Logstash 6.7 用户指南中文版","language":"zh-hans","gitbook":"3.2.3","description":"Logstash 6.7 的用户指南中文版"},"file":{"path":"06-Configuring-Logstash/Configuring-Centralized-Pipeline-Management.md","mtime":"2019-04-29T09:30:24.097Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T05:19:21.950Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
