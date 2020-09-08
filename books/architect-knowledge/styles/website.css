@@ -253,6 +253,34 @@ img[alt="synchronized-monitor"] {
     width: 60%;
 }
 
+img[alt="schedule-01"] {
+    width: 80%;
+}
+
+img[alt="schedule-02"] {
+    width: 60%;
+}
+
+img[alt="future-forkjoin-05"] {
+    width: 60%;
+}
+
+img[alt="future-forkjoin-02"] {
+    width: 60%;
+}
+
+img[alt="future-forkjoin-03"] {
+    width: 60%;
+}
+
+img[alt="future-forkjoin-04"] {
+    width: 60%;
+}
+
+img[alt="future-forkjoin-05"] {
+    width: 60%;
+}
+
 
 /* ================ 06-Distributed ================ */
 
@@ -398,6 +426,18 @@ img[alt="mongo-cluster-architecture"] {
 }
 
 img[alt="mongo-shard-architecture"] {
+    width: 80%;
+}
+
+img[alt="netty-sample-20"] {
+    width: 60%;
+}
+
+img[alt="netty-sample-22"] {
+    width: 80%;
+}
+
+img[alt="netty-sample-23"] {
     width: 80%;
 }
 
